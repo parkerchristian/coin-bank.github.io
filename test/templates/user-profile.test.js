@@ -1,20 +1,8 @@
+import { makeProfileTemplate } from '../../src/templates/user-profile.js';
+
 const test = QUnit.test;
 
 QUnit.module ('MAKE USER PROFILE TEMPLATE');
-
-function makeProfileTemplate(user) {
-    const html = `
-        <div id="user-display">
-            <img src="${user.photoURL}">
-            <p>${user.displayName}</p>
-            <input type="submit" value="Sign Out">
-        </div>
-    `;
-
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('dynamic user profile template test', assert => {
     // arrange
