@@ -1,3 +1,5 @@
+import { auth } from '../firebase/firebase.js';
+
 export function makeProfileTemplate(user) {
     const image = user.photoURL || '../../assets/avatar.png';
     const html = `
@@ -11,4 +13,22 @@ export function makeProfileTemplate(user) {
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
+}
+
+const headerContainer = document.getElementById('header-container');
+
+export default function loadUserProfile() {
+    auth.onAuthStateChanged(user => {
+        if(user) {
+            const dom = makeProfileTemplate(user);
+            const signOutButton = dom.querySelector('input');
+            signOutButton.addEventListener('click', () => {
+                auth.signOut();
+                window.location = './index.html';
+            });
+            headerContainer.appendChild(dom);
+        } else {
+            window.location = './index.html';
+        }
+    });
 }
