@@ -3,7 +3,8 @@ export function makeCharacterUrl(queryOptions) {
     const API_KEY = '23d38bd86abd4d9b4c8a0605bf740b2a';
     const url = new URL(BASE_URL);
     url.searchParams.set('nameStartsWith', queryOptions.name);
-    // url.searchParams.set('offset', queryOptions.offset);
+    const offset = (queryOptions.page - 1) * 20;    
+    url.searchParams.set('offset', offset);
     url.searchParams.set('apikey', API_KEY);
     return url.toString();
 }
