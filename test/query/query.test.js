@@ -1,4 +1,4 @@
-import { writeSearchToQuery, readFromQuery } from '../../src/query/query-component.js';
+import { writeSearchToQuery, readFromQuery, writePageToQuery } from '../../src/query/query-component.js';
 
 const test = QUnit.test;
 
@@ -37,12 +37,6 @@ test('read existing query', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
-
-function writePageToQuery(existingQuery, page) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('page', page);
-    return searchParams.toString();
-}
 
 test('update query on page change', assert => {
     // Arrange 
