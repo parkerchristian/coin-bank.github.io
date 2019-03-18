@@ -13,8 +13,15 @@ export function makeCharacterCard(character) {
 
 export default function loadCharacterCards(characters) {
     const heroesUL = document.getElementById('heroes-ul');
+    clearCharacters(heroesUL);
     characters.forEach(character => {
         const dom = makeCharacterCard(character);
         heroesUL.appendChild(dom);
     });
+}
+
+function clearCharacters(node) {
+    while(node.children.length > 0) {
+        node.lastElementChild.remove();
+    }
 }

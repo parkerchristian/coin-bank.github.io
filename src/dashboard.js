@@ -11,7 +11,7 @@ window.addEventListener('hashchange', () => {
     const existingQuery = window.location.hash.slice(1);
     const queryOptions = readFromQuery(existingQuery);
     const url = makeCharacterUrl(queryOptions);
-    fetchAPI(url);
+    // fetchAPI(url);
 });
 
 
