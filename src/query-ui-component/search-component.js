@@ -1,7 +1,7 @@
 import { writeSearchToQuery } from '../query/query-component.js';
 
 const searchForm = document.getElementById('search-form');
-const submitButton = document.getElementById('submit-button');
+// const submitButton = document.getElementById('submit-button');
 const textInput = document.getElementById('text-input');
 
 searchForm.addEventListener('submit', event => {

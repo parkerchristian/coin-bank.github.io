@@ -1,8 +1,9 @@
 import loadUserProfile from './templates/user-profile.js';
 import loadCharacterCards from './templates/character-card.js';
-import './search-component/search-component.js';
+import './query-ui-component/search-component.js';
 import { readFromQuery } from './query/query-component.js';
 import { makeCharacterUrl } from './api-url/api-url.js';
+import './query-ui-component/paging-component.js';
 
 loadUserProfile();
 
