@@ -1,19 +1,8 @@
+import { makeCharacterCard } from '../../src/templates/character-card.js';
+
 const test = QUnit.test;
 
 QUnit.module('CHARACTER CARD');
-
-function makeCharacterCard(character) {
-    const html = `
-        <li>
-            <img src="${character.thumbnail.path}.${character.thumbnail.extension}">
-            <p>${character.name}</p>
-        </li>
-    `;
-
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('make character card template', assert => {
     // arrange
