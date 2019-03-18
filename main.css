@@ -2,3 +2,26 @@
     border-radius: 100%;
     width: 40px;
 }
+
+#heroes-ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    list-style: none;
+    border: solid;
+}
+#heroes-ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 5px;
+    padding: 3px;
+    width: 200px;
+    border: solid;
+}
+
+#heroes-ul img {
+    width: 200px;
+}
