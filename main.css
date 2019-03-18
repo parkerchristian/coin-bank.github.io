@@ -7,10 +7,11 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    
+
     list-style: none;
     border: solid;
 }
+
 #heroes-ul li {
     display: flex;
     flex-direction: column;
