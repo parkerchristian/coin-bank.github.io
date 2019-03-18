@@ -37,4 +37,3 @@ test('read existing query', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
-
