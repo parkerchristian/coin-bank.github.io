@@ -7,7 +7,7 @@ QUnit.module('QUERY TESTS');
 test('write search to query test when existing is blank', assert => {
     //Arrange
     const existingQuery = '';
-    const expected = 'name=squirrel';
+    const expected = 'name=squirrel&page=1';
     const searchTerm = 'squirrel';
     //Act
     const result = writeSearchToQuery(existingQuery, searchTerm);
@@ -17,8 +17,8 @@ test('write search to query test when existing is blank', assert => {
 
 test('write search to query test with existing query', assert => {
     //Arrange
-    const existingQuery = 'name=dog';
-    const expected = 'name=squirrel';
+    const existingQuery = 'name=dog&page=3';
+    const expected = 'name=squirrel&page=1';
     const searchTerm = 'squirrel';
     //Act
     const result = writeSearchToQuery(existingQuery, searchTerm);
@@ -28,9 +28,10 @@ test('write search to query test with existing query', assert => {
 
 test('read existing query', assert => {
     // arrange
-    const existingQuery = 'name=squirrel';
+    const existingQuery = 'name=squirrel&page=1';
     const expected = {
-        name: 'squirrel'
+        name: 'squirrel',
+        page: 1
     };
     // act
     const result = readFromQuery(existingQuery);
