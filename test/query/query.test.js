@@ -37,3 +37,20 @@ test('read existing query', assert => {
     // assert
     assert.deepEqual(result, expected);
 });
+
+function writePageToQuery(existingQuery, page) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('page', page);
+    return searchParams.toString();
+}
+
+test('update query on page change', assert => {
+    // Arrange 
+    const existingQuery = 'name=squirrel&page=1';
+    const expected = 'name=squirrel&page=2';
+    const page = 2;
+    //Act
+    const result = writePageToQuery(existingQuery, page);
+    //Assert
+    assert.equal(result, expected);
+});
