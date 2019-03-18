@@ -15,15 +15,16 @@ function updatePaging(pagingOptions) {
 }
 
 updatePaging(pagingOptions);
+loadPaging();
 
-nextButton.addEventListener('click', () => {
-    pagingOptions.currentPage++;
-    updatePaging(pagingOptions);
-});
-
-previousButton.addEventListener('click', () => {
-    pagingOptions.currentPage--;
-    updatePaging(pagingOptions);
-});
-
-
+function loadPaging() {
+    nextButton.addEventListener('click', () => {
+        pagingOptions.currentPage++;
+        updatePaging(pagingOptions);
+    });
+    
+    previousButton.addEventListener('click', () => {
+        pagingOptions.currentPage--;
+        updatePaging(pagingOptions);
+    });
+}
