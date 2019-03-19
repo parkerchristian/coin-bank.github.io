@@ -12,6 +12,8 @@ window.addEventListener('hashchange', () => {
     const existingQuery = window.location.hash.slice(1);
     const queryOptions = readFromQuery(existingQuery);
     const url = makeCharacterUrl(queryOptions);
+    const pagingContainer = document.getElementById('paging-container');
+    pagingContainer.classList.remove('hidden');
     fetchAPI(url);
 });
 

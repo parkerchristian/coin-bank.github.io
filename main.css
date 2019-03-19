@@ -26,3 +26,7 @@
 #heroes-ul img {
     width: 200px;
 }
+
+.hidden {
+    display: none;
+}
