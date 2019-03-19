@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Compare Characters</title>
+</head>
+<body>
+
+    <header>
+        <img src="">
+        <h1 id="title">Marvel Matches</h1>
+        <a href="./favorites.html">Go to Favorites</a>
+        <a href="./dashboard.html">Go to Dashboard</a>
+    </header>
+
+    <main>
+        <div id="select-one">
+            <select>
+                <option value="null" selected="selected" disabled="">Select a Character</option>
+                <option value="1">Squirrel Girl</option>
+                <option value="2">Spider Man</option>
+                <option value="3">Hulk</option>
+                <option value="4">Thor</option>
+                <option value="5">Wolfie</option>
+                <option value="6">Guy</option>
+            </select>
+        </div>
+        <div id="select-two"></div>
+
+    </main>
+<script type="module" src="./src/compare/compare.js"></script>
+</body>
+</html>
