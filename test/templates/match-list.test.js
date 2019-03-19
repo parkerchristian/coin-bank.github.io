@@ -1,18 +1,8 @@
+import { makeMatchListTemplate } from '../../src/templates/match-list.js';
+
 const test = QUnit.test;
 
 QUnit.module('MATCH LIST TEST');
-
-function makeMatchListTemplate(comic) {
-    const html = `
-        <li>
-            <p>${ comic.title }</p>
-            <p>${ comic.description }</p>
-        </li>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('make match list template', assert => {
     //Arrange
