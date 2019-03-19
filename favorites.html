@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>Favorites</title>
 </head>
@@ -10,12 +13,16 @@
 
     <header>
         <h1>Favorite Characters</h1>
+        <a href="./dashboard.html">Go to Dashboard</a>
     </header>
 
     <main>
-
-        <section>
-        </section>
+        <div id="heroes-div-container">
+            <ul id="heroes-ul">
+                
+            </ul>
+        </div>
+        
 
     </main>
 <script type="module" src="./src/favorites/favorites.js"></script>

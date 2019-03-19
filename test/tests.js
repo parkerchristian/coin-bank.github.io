@@ -5,6 +5,7 @@ import './templates/user-profile.test.js';
 import './templates/character-card.test.js';
 import './query/query.test.js';
 import './api-url/api-url.test.js';
+import './objects-to-array/objects-to-array.test.js';
 
 QUnit.done(() => {
     app.delete();
