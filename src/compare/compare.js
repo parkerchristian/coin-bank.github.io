@@ -1,9 +1,10 @@
+import { makeComicsByCharacterUrl } from '../api-url/api-url.js';
 import { makeSelectOptionTemplate } from '../templates/select-option.js';
 import { favoritesByUserRef, auth } from '../firebase/firebase.js';
 import objectToArray from '../favorites/object-to-array.js';
 
-const selectOne = document.getElementById('select-one');
-const selectTwo = document.getElementById('select-two');
+const selectOneContainer = document.getElementById('select-one');
+const selectTwoContainer = document.getElementById('select-two');
 const compareForm = document.getElementById('compare-form');
 
 function loadSelectOption(select, favoriteList) {
@@ -18,17 +19,26 @@ auth.onAuthStateChanged(user => {
         let favoriteList = null;
         if(value) {
             favoriteList = objectToArray(value);
-            loadSelectOption(selectOne, favoriteList);
-            loadSelectOption(selectTwo, favoriteList);
+            loadSelectOption(selectOneContainer, favoriteList);
+            loadSelectOption(selectTwoContainer, favoriteList);
         }
     });
 });
 
 compareForm.addEventListener('submit', event => {
     event.preventDefault();
-    const characterOne = selectOne.value;
-    const characterTwo = selectTwo.value;
-    const characterOneUrl = makeComicsByCharacterUrl(characterOne);
+    const selectOne = selectOneContainer.querySelector('select');
+    const selectTwo = selectTwoContainer.querySelector('select');
+    const characterOne = selectOne.options[selectOne.selectedIndex].value;
+    const characterTwo = selectTwo.options[selectTwo.selectedIndex].value;
+    const characterIDs = [characterOne, characterTwo];
+    const charactersUrl = makeComicsByCharacterUrl(characterIDs);
     
+    fetch(charactersUrl)
+        .then(response => response.json())
+        .then(data => {
+            const results = data.data.results;
+            console.log('!!!', results);
+        });
 
 }); 

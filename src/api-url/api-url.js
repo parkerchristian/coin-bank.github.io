@@ -10,10 +10,11 @@ export function makeCharacterUrl(queryOptions) {
     return url.toString();
 }
 
-export function makeComicsByCharacterUrl(characterID) {
-    const BASE_URL = `https://gateway.marvel.com/v1/public/characters/${characterID}/comics`;
+export function makeComicsByCharacterUrl(characterIDs) {
+    const BASE_URL = `https://gateway.marvel.com/v1/public/comics`;
     const url = new URL(BASE_URL);
     url.searchParams.set('limit', 50);
     url.searchParams.set('apikey', API_KEY);
+    url.searchParams.set('sharedAppearances', characterIDs)
     return url.toString();
 }
