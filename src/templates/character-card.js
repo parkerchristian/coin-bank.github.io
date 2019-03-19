@@ -22,6 +22,17 @@ export default function loadCharacterCards(characters) {
         const userId = auth.currentUser.uid;
         const userFavoriteListRef = favoritesByUserRef.child(userId);
         const userFavoriteCharacterRef = userFavoriteListRef.child(character.id);
+
+        userFavoriteCharacterRef.on('value', snapshot =>{
+            const value = snapshot.val();
+            if(value){
+                image.classList.add('favorite');
+            } else {
+                image.classList.remove('favorite');
+            }
+
+        });
+
         image.addEventListener('click', () => {
             if(image.classList.contains('favorite')) {
                 image.classList.remove('favorite');
