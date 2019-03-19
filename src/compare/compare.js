@@ -4,6 +4,7 @@ import objectToArray from '../favorites/object-to-array.js';
 
 const selectOne = document.getElementById('select-one');
 const selectTwo = document.getElementById('select-two');
+const compareForm = document.getElementById('compare-form');
 
 function loadSelectOption(select, favoriteList) {
     const dom = makeSelectOptionTemplate(favoriteList);
@@ -22,3 +23,12 @@ auth.onAuthStateChanged(user => {
         }
     });
 });
+
+compareForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const characterOne = selectOne.value;
+    const characterTwo = selectTwo.value;
+    const characterOneUrl = makeComicsByCharacterUrl(characterOne);
+    
+
+}); 
