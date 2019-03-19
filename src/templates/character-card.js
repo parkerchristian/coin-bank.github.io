@@ -16,6 +16,14 @@ export default function loadCharacterCards(characters) {
     clearCharacters(heroesUL);
     characters.forEach(character => {
         const dom = makeCharacterCard(character);
+        const image = dom.querySelector('img');
+        image.addEventListener('click', () => {
+            if(image.classList.contains('favorite')) {
+                image.classList.remove('favorite');
+            } else {
+                image.classList.add('favorite');
+            }
+        });
         heroesUL.appendChild(dom);
     });
 }
