@@ -1,4 +1,5 @@
 import { favoritesByUserRef, auth } from '../firebase/firebase.js';
+import clearContainer from './clear-container.js';
 
 export function makeCharacterCard(character) {
     const html = `
@@ -15,7 +16,7 @@ export function makeCharacterCard(character) {
 
 export default function loadCharacterCards(characters) {
     const heroesUL = document.getElementById('heroes-ul');
-    clearCharacters(heroesUL);
+    clearContainer(heroesUL);
     if(!characters) {
         return;
     }
@@ -53,8 +54,3 @@ export default function loadCharacterCards(characters) {
     });
 }
 
-function clearCharacters(node) {
-    while(node.children.length > 0) {
-        node.lastElementChild.remove();
-    }
-}
