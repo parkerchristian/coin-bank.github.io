@@ -40,8 +40,9 @@ export default function loadCharacterCards(characters) {
             } else {
                 image.classList.add('favorite');
                 userFavoriteCharacterRef.set({
+                    id: character.id,
                     name: character.name,
-                    photoURL: `${character.thumbnail.path}.${character.thumbnail.extension}`
+                    thumbnail: character.thumbnail
                 });
             }
         });
