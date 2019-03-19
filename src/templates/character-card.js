@@ -16,6 +16,9 @@ export function makeCharacterCard(character) {
 export default function loadCharacterCards(characters) {
     const heroesUL = document.getElementById('heroes-ul');
     clearCharacters(heroesUL);
+    if(!characters) {
+        return;
+    }
     characters.forEach(character => {
         const dom = makeCharacterCard(character);
         const image = dom.querySelector('img');
