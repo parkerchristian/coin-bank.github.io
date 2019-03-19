@@ -1,0 +1,6 @@
+#match-list li {
+    list-style: none;
+    border: solid;
+    padding: 5px;
+    margin: 5px;
+}
