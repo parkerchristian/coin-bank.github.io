@@ -2,6 +2,7 @@ import { makeComicsByCharacterUrl } from '../api-url/api-url.js';
 import { makeSelectOptionTemplate } from '../templates/select-option.js';
 import { favoritesByUserRef, auth } from '../firebase/firebase.js';
 import objectToArray from '../favorites/object-to-array.js';
+import loadMatchList from '../templates/match-list.js';
 
 const selectOneContainer = document.getElementById('select-one');
 const selectTwoContainer = document.getElementById('select-two');
@@ -38,7 +39,7 @@ compareForm.addEventListener('submit', event => {
         .then(response => response.json())
         .then(data => {
             const results = data.data.results;
-            console.log('!!!', results);
+            loadMatchList(results);
         });
 
 }); 
