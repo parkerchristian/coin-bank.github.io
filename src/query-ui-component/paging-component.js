@@ -5,31 +5,27 @@ const nextButton = document.getElementById('next-button');
 const currentPage = document.getElementById('current-page');
 const totalPages = document.getElementById('total-pages');
 
-
-const pagingOptions = {
-    currentPage: 1,
-    totalPages: 10
-};
-
-function updatePaging(pagingOptions) {
+export function updatePaging(pagingOptions) {
     currentPage.textContent = pagingOptions.currentPage;
+    totalPages.textContent = pagingOptions.totalPages || 1;
     previousButton.disabled = pagingOptions.currentPage === 1;
     nextButton.disabled = pagingOptions.currentPage === pagingOptions.totalPages;
-    const existingQuery = window.location.hash.slice(1);
-    window.location.hash = writePageToQuery(existingQuery, pagingOptions.currentPage);
 }
 
-updatePaging(pagingOptions);
-loadPaging();
+function updateQuery(pagingOptions) {
+    const existingQuery = window.location.hash.slice(1);
+    window.location.hash = writePageToQuery(existingQuery, pagingOptions.currentPage);
 
-function loadPaging() {
+}
+
+export function loadPaging(pagingOptions) {
     nextButton.addEventListener('click', () => {
         pagingOptions.currentPage++;
-        updatePaging(pagingOptions);
+        updateQuery(pagingOptions);
     });
     
     previousButton.addEventListener('click', () => {
         pagingOptions.currentPage--;
-        updatePaging(pagingOptions);
+        updateQuery(pagingOptions);
     });
 }
