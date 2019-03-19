@@ -4,7 +4,8 @@ export function makeMatchListTemplate(comic) {
     const description = comic.description || 'No description provided.';
     const html = `
         <li>
-            <p>${ comic.title }</p>
+            <a href="${ comic.urls[0].url }"><img src="${ comic.thumbnail.path }.${ comic.thumbnail.extension }"></a>
+            <p><a href="${ comic.urls[0].url }">${ comic.title }</a></p>
             <p>${ description }</p>
         </li>
     `;

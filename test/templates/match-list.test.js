@@ -8,11 +8,14 @@ test('make match list template', assert => {
     //Arrange
     const expected = `
         <li>
-            <p>Title</p>
+            <a href="google.com"><img src="words.jpg"></a> 
+            <p><a href="google.com">Title</a></p> 
             <p>Description</p>
         </li>
     `;
     const comic = {
+        urls: [{ url: 'google.com' }],
+        thumbnail: { path: 'words', extension: 'jpg' },
         title: 'Title',
         description: 'Description'
     };
