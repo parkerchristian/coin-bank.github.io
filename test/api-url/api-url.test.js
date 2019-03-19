@@ -20,7 +20,7 @@ test('make character search URL', assert => {
 test('make Comics search url', assert => {
     // arrange
     const characterID = 1010860;
-    const expected = 'https://gateway.marvel.com/v1/public/characters/1010860/comics?limit=50&apikey=23d38bd86abd4d9b4c8a0605bf740b2a';
+    const expected = 'https://gateway.marvel.com/v1/public/comics?limit=50&apikey=23d38bd86abd4d9b4c8a0605bf740b2a&sharedAppearances=1010860';
     // act
     const result = makeComicsByCharacterUrl(characterID);
     // assert
