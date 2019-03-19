@@ -1,3 +1,5 @@
+import { favoritesByUserRef, auth } from '../firebase/firebase.js';
+
 export function makeCharacterCard(character) {
     const html = `
         <li>
@@ -17,11 +19,19 @@ export default function loadCharacterCards(characters) {
     characters.forEach(character => {
         const dom = makeCharacterCard(character);
         const image = dom.querySelector('img');
+        const userId = auth.currentUser.uid;
+        const userFavoriteListRef = favoritesByUserRef.child(userId);
+        const userFavoriteCharacterRef = userFavoriteListRef.child(character.id);
         image.addEventListener('click', () => {
             if(image.classList.contains('favorite')) {
                 image.classList.remove('favorite');
+                userFavoriteCharacterRef.remove();
             } else {
                 image.classList.add('favorite');
+                userFavoriteCharacterRef.set({
+                    name: character.name,
+                    photoURL: `${character.thumbnail.path}.${character.thumbnail.extension}`
+                });
             }
         });
         heroesUL.appendChild(dom);
