@@ -41,5 +41,4 @@ compareForm.addEventListener('submit', event => {
             const results = data.data.results;
             loadMatchList(results);
         });
-
 }); 

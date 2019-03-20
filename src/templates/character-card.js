@@ -34,7 +34,6 @@ export default function loadCharacterCards(characters) {
             } else {
                 image.classList.remove('favorite');
             }
-
         });
 
         image.addEventListener('click', () => {
@@ -53,4 +52,3 @@ export default function loadCharacterCards(characters) {
         heroesUL.appendChild(dom);
     });
 }
-
