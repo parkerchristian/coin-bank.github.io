@@ -3,6 +3,7 @@ import { makeSelectOptionTemplate } from '../templates/select-option.js';
 import { favoritesByUserRef, auth } from '../firebase/firebase.js';
 import objectToArray from '../favorites/object-to-array.js';
 import loadMatchList from '../templates/match-list.js';
+import './paging.js';
 
 const selectOneContainer = document.getElementById('select-one');
 const selectTwoContainer = document.getElementById('select-two');
@@ -40,5 +41,6 @@ compareForm.addEventListener('submit', event => {
         .then(data => {
             const results = data.data.results;
             loadMatchList(results);
+            console.log(results);
         });
 }); 
