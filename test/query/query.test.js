@@ -49,3 +49,22 @@ test('update query on page change', assert => {
     //Assert
     assert.equal(result, expected);
 });
+
+function writeCompareToQuery(existingQuery, charactersIDs) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('char1', charactersIDs[0]);
+    searchParams.set('char2', charactersIDs[1]);
+    searchParams.set('page', 1);
+    return searchParams.toString();
+}
+
+test('write compare to query', assert => {
+    //Arrange
+    const existingQuery = '';
+    const expected = 'char1=1010860&char2=1009368&page=1';
+    const charactersIDs = [1010860, 1009368];
+    //Act
+    const result = writeCompareToQuery(existingQuery, charactersIDs);
+    //Assert
+    assert.equal(result, expected);
+});

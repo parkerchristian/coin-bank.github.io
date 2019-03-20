@@ -36,11 +36,12 @@ compareForm.addEventListener('submit', event => {
     const characterIDs = [characterOne, characterTwo];
     const charactersUrl = makeComicsByCharacterUrl(characterIDs);
     
+    
+
     fetch(charactersUrl)
         .then(response => response.json())
         .then(data => {
             const results = data.data.results;
             loadMatchList(results);
-            console.log(results);
         });
 }); 
