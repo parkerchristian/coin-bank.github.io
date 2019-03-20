@@ -19,3 +19,11 @@ export function writePageToQuery(existingQuery, page) {
     searchParams.set('page', page);
     return searchParams.toString();
 }
+
+export function writeCompareToQuery(existingQuery, charactersIDs) {
+    const searchParams = new URLSearchParams(existingQuery);
+    searchParams.set('char1', charactersIDs[0]);
+    searchParams.set('char2', charactersIDs[1]);
+    searchParams.set('page', 1);
+    return searchParams.toString();
+}

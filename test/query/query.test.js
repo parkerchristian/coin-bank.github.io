@@ -1,4 +1,4 @@
-import { writeSearchToQuery, readFromQuery, writePageToQuery } from '../../src/query/query-component.js';
+import { writeSearchToQuery, readFromQuery, writePageToQuery, writeCompareToQuery } from '../../src/query/query-component.js';
 
 const test = QUnit.test;
 
@@ -49,14 +49,6 @@ test('update query on page change', assert => {
     //Assert
     assert.equal(result, expected);
 });
-
-function writeCompareToQuery(existingQuery, charactersIDs) {
-    const searchParams = new URLSearchParams(existingQuery);
-    searchParams.set('char1', charactersIDs[0]);
-    searchParams.set('char2', charactersIDs[1]);
-    searchParams.set('page', 1);
-    return searchParams.toString();
-}
 
 test('write compare to query', assert => {
     //Arrange
