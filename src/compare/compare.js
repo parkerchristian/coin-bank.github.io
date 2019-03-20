@@ -6,6 +6,12 @@ import loadMatchList from '../templates/match-list.js';
 import './paging.js';
 import { writeCompareToQuery, readCompareFromQuery } from '../query/query-component.js';
 import { updatePaging, loadComparePaging } from './paging.js';
+import { loadFooter, loadHeader } from '../templates/banners.js';
+import loadUserProfile from '../templates/user-profile.js';
+
+loadHeader();
+loadUserProfile();
+loadFooter();
 
 const selectOneContainer = document.getElementById('select-one');
 const selectTwoContainer = document.getElementById('select-two');

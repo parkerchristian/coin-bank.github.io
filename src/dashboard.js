@@ -5,8 +5,12 @@ import { readFromQuery } from './query/query-component.js';
 import { makeCharacterUrl } from './api-url/api-url.js';
 import './query-ui-component/paging-component.js';
 import { loadPaging, updatePaging } from './query-ui-component/paging-component.js';
+import { loadHeader, loadFooter } from './templates/banners.js';
 
+
+loadHeader();
 loadUserProfile();
+loadFooter();
 
 window.addEventListener('hashchange', () => {
     const existingQuery = window.location.hash.slice(1);
@@ -14,7 +18,7 @@ window.addEventListener('hashchange', () => {
     const url = makeCharacterUrl(queryOptions);
     const pagingContainer = document.getElementById('paging-container');
     pagingContainer.classList.remove('hidden');
-    fetchAPI(url);
+    // fetchAPI(url);
 });
 
 function fetchAPI(url) {
