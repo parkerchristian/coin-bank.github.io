@@ -5,7 +5,7 @@
     justify-content: space-around;
 }
 
-#match-list li {
+#match-list > li {
     list-style: none;
     border: solid;
     padding: 20px;

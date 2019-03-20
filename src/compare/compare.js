@@ -35,6 +35,13 @@ compareForm.addEventListener('submit', event => {
     const selectTwo = selectTwoContainer.querySelector('select');
     const characterOne = selectOne.options[selectOne.selectedIndex].value;
     const characterTwo = selectTwo.options[selectTwo.selectedIndex].value;
+    
+    // TODO disable compare button
+    if((!characterOne) || (!characterTwo)) {
+        return;
+    } 
+    // DO IT
+
     const characterIDs = [characterOne, characterTwo];
     
     const existingQuery = window.location.hash.slice(1);
