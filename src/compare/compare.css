@@ -1,6 +1,28 @@
+#match-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 #match-list li {
     list-style: none;
     border: solid;
-    padding: 5px;
+    padding: 20px;
+    width: 700px;
     margin: 5px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#match-list img {
+    width: 200px;
+    margin-left: 20px;
+}
+
+#match-list div {
+    flex-grow: 1;
 }
