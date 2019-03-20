@@ -11,7 +11,7 @@ html, body {
     width: 40px;
 }
 
-header {
+#div-header {
     display: flex;
     align-items: center;
 
@@ -20,14 +20,14 @@ header {
     background: rgb(152, 6, 6);
 }
 
-header img {
+#div-header img {
     align-self: flex-start;
 
     height: 125%;
     width: 350px;
 }
 
-header h1 {
+#div-header h1 {
     font-family: 'Bangers', cursive;
     font-size: 3.75em;
     letter-spacing: .05em;
@@ -84,7 +84,7 @@ header h1 {
     border: 2px solid red;
 }
 
-footer {
+#div-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,11 +102,11 @@ footer {
     border: solid black;
 }
 
-footer span {
+#div-footer span {
     margin-right: 20px;
 }
 
-footer img {
+#div-footer img {
     height: 100%;
     margin-left: 3px;
 }
