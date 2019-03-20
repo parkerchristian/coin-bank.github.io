@@ -36,15 +36,14 @@ compareForm.addEventListener('submit', event => {
     const characterTwo = selectTwo.options[selectTwo.selectedIndex].value;
     const characterIDs = [characterOne, characterTwo];
     
-    const existingQuery = window.location.hash.slice(1);
-    const newQuery = writeCompareToQuery(existingQuery, characterIDs);
+    // const existingQuery = window.location.hash.slice(1);
+    // const newQuery = writeCompareToQuery(existingQuery, characterIDs);
     
-    window.location.hash = newQuery;
+    // window.location.hash = newQuery;
     
 }); 
 
 window.addEventListener('hashchange', () => {
-    
     const charactersUrl = makeComicsByCharacterUrl(characterIDs);
     fetch(charactersUrl)
         .then(response => response.json())

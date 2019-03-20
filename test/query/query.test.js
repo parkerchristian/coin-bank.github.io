@@ -60,3 +60,25 @@ test('write compare to query', assert => {
     //Assert
     assert.equal(result, expected);
 });
+
+function readCompareFromQuery(existingQuery) {
+    const searchParams = new URLSearchParams(existingQuery);
+    const queryOptions = {
+        characters: [parseInt(searchParams.get('char1')), parseInt(searchParams.get('char2'))],
+        page: parseInt(searchParams.get('page'))
+    };
+    return queryOptions;
+}
+
+test('read existing query for Compare', assert => {
+    // arrange
+    const existingQuery = 'char1=1010860&char2=1009368&page=1';
+    const expected = {
+        characters: [1010860, 1009368],
+        page: 1
+    };
+    // act
+    const result = readCompareFromQuery(existingQuery);
+    // assert
+    assert.deepEqual(result, expected);
+});
