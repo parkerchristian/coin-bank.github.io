@@ -1,6 +1,55 @@
-#header-container img {
+/* font-family: 'Bangers', cursive;
+font-family: 'Montserrat', sans-serif; */
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#user-display img {
     border-radius: 100%;
     width: 40px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    height: 125px;
+    border-bottom: solid black 5px;
+    background: rgb(152, 6, 6);
+}
+
+header img {
+    align-self: flex-start;
+
+    height: 125%;
+    width: 350px;
+}
+
+header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.75em;
+    letter-spacing: .05em;
+    margin-left: 40px;
+}
+
+#nav-links-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    align-self: flex-end;
+}
+
+#nav-links-container a {
+    margin: 20px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#nav-links-container a:visited {
+    color: white;
 }
 
 #heroes-ul {
@@ -33,4 +82,31 @@
 
 .favorite {
     border: 2px solid red;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Bangers', cursive;
+    font-size: 1.75em;
+    letter-spacing: .1em;
+    color: white;
+    background: black;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    border: solid black;
+}
+
+footer span {
+    margin-right: 20px;
+}
+
+footer img {
+    height: 100%;
+    margin-left: 3px;
 }
