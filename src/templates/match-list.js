@@ -5,8 +5,10 @@ export function makeMatchListTemplate(comic) {
     const html = `
         <li>
             <a href="${ comic.urls[0].url }"><img src="${ comic.thumbnail.path }.${ comic.thumbnail.extension }"></a>
+            <div class="comic-details"> 
             <p><a href="${ comic.urls[0].url }">${ comic.title }</a></p>
             <p>${ description }</p>
+            </div>
         </li>
     `;
     const template = document.createElement('template');
