@@ -12,7 +12,14 @@ function updatePaging(pagingOptions) {
     currentPageSpans.forEach(span => {
         span.textContent = pagingOptions.currentPage; 
     });
+    previousButtons.forEach(button => {
+        button.disabled = pagingOptions.currentPage === 1;
+    });
+    nextButtons.forEach(button => {
+        button.disabled = pagingOptions.currentPage === pagingOptions.totalPages;
+    });
 }
+updatePaging(pagingOptions);
 
 previousButtons.forEach(button => {
     button.addEventListener('click', () => {
