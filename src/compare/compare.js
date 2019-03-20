@@ -4,6 +4,7 @@ import { favoritesByUserRef, auth } from '../firebase/firebase.js';
 import objectToArray from '../favorites/object-to-array.js';
 import loadMatchList from '../templates/match-list.js';
 import './paging.js';
+import { writeCompareToQuery } from '../query/query-component.js';
 
 const selectOneContainer = document.getElementById('select-one');
 const selectTwoContainer = document.getElementById('select-two');
@@ -34,14 +35,21 @@ compareForm.addEventListener('submit', event => {
     const characterOne = selectOne.options[selectOne.selectedIndex].value;
     const characterTwo = selectTwo.options[selectTwo.selectedIndex].value;
     const characterIDs = [characterOne, characterTwo];
-    const charactersUrl = makeComicsByCharacterUrl(characterIDs);
     
+    const existingQuery = window.location.hash.slice(1);
+    const newQuery = writeCompareToQuery(existingQuery, characterIDs);
     
+    window.location.hash = newQuery;
+    
+}); 
 
+window.addEventListener('hashchange', () => {
+    
+    const charactersUrl = makeComicsByCharacterUrl(characterIDs);
     fetch(charactersUrl)
         .then(response => response.json())
         .then(data => {
             const results = data.data.results;
             loadMatchList(results);
         });
-}); 
+});
