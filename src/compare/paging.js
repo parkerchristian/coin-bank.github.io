@@ -5,7 +5,6 @@ const nextButtons = document.querySelectorAll('.next-button');
 const currentPageSpans = document.querySelectorAll('.current-page');
 const totalPageSpans = document.querySelectorAll('.total-pages');
 
-
 export function updatePaging(pagingOptions) {
     currentPageSpans.forEach(span => {
         span.textContent = pagingOptions.currentPage; 

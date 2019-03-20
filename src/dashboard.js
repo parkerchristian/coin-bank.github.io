@@ -14,7 +14,7 @@ window.addEventListener('hashchange', () => {
     const url = makeCharacterUrl(queryOptions);
     const pagingContainer = document.getElementById('paging-container');
     pagingContainer.classList.remove('hidden');
-    // fetchAPI(url);
+    fetchAPI(url);
 });
 
 function fetchAPI(url) {
