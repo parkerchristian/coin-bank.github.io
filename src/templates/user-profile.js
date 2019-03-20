@@ -15,7 +15,7 @@ export function makeProfileTemplate(user) {
     return template.content;
 }
 
-const headerContainer = document.getElementById('header-container');
+const profileDisplayContainer = document.getElementById('profile-display-container');
 
 export default function loadUserProfile() {
     auth.onAuthStateChanged(user => {
@@ -26,7 +26,7 @@ export default function loadUserProfile() {
                 auth.signOut();
                 window.location = './index.html';
             });
-            headerContainer.appendChild(dom);
+            profileDisplayContainer.appendChild(dom);
         } else {
             window.location = './index.html';
         }
