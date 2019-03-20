@@ -14,6 +14,15 @@ export function readFromQuery(existingQuery) {
     return queryOptions;
 }
 
+export function readCompareFromQuery(existingQuery) {
+    const searchParams = new URLSearchParams(existingQuery);
+    const queryOptions = {
+        characters: [parseInt(searchParams.get('char1')), parseInt(searchParams.get('char2'))],
+        page: parseInt(searchParams.get('page'))
+    };
+    return queryOptions;
+}
+
 export function writePageToQuery(existingQuery, page) {
     const searchParams = new URLSearchParams(existingQuery);
     searchParams.set('page', page);

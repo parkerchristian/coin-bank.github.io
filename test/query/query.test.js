@@ -1,4 +1,4 @@
-import { writeSearchToQuery, readFromQuery, writePageToQuery, writeCompareToQuery } from '../../src/query/query-component.js';
+import { writeSearchToQuery, readFromQuery, writePageToQuery, writeCompareToQuery, readCompareFromQuery } from '../../src/query/query-component.js';
 
 const test = QUnit.test;
 
@@ -60,15 +60,6 @@ test('write compare to query', assert => {
     //Assert
     assert.equal(result, expected);
 });
-
-function readCompareFromQuery(existingQuery) {
-    const searchParams = new URLSearchParams(existingQuery);
-    const queryOptions = {
-        characters: [parseInt(searchParams.get('char1')), parseInt(searchParams.get('char2'))],
-        page: parseInt(searchParams.get('page'))
-    };
-    return queryOptions;
-}
 
 test('read existing query for Compare', assert => {
     // arrange
