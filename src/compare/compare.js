@@ -4,7 +4,8 @@ import { favoritesByUserRef, auth } from '../firebase/firebase.js';
 import objectToArray from '../favorites/object-to-array.js';
 import loadMatchList from '../templates/match-list.js';
 import './paging.js';
-import { writeCompareToQuery } from '../query/query-component.js';
+import { writeCompareToQuery, readCompareFromQuery } from '../query/query-component.js';
+import { updatePaging, loadComparePaging } from './paging.js';
 
 const selectOneContainer = document.getElementById('select-one');
 const selectTwoContainer = document.getElementById('select-two');
@@ -36,19 +37,31 @@ compareForm.addEventListener('submit', event => {
     const characterTwo = selectTwo.options[selectTwo.selectedIndex].value;
     const characterIDs = [characterOne, characterTwo];
     
-    // const existingQuery = window.location.hash.slice(1);
-    // const newQuery = writeCompareToQuery(existingQuery, characterIDs);
+    const existingQuery = window.location.hash.slice(1);
+    const newQuery = writeCompareToQuery(existingQuery, characterIDs);
     
-    // window.location.hash = newQuery;
-    
+    window.location.hash = newQuery;
 }); 
 
 window.addEventListener('hashchange', () => {
-    const charactersUrl = makeComicsByCharacterUrl(characterIDs);
+    const existingQuery = window.location.hash.slice(1);
+    const queryOptions = readCompareFromQuery(existingQuery);
+    const charactersUrl = makeComicsByCharacterUrl(queryOptions);
+    const pagingContainers = document.querySelectorAll('.paging-container');
+    pagingContainers.forEach(container => {
+        container.classList.remove('hidden');
+    });
     fetch(charactersUrl)
         .then(response => response.json())
         .then(data => {
             const results = data.data.results;
+            const totalCount = data.data.total;
+            const pagingOptions = {
+                currentPage: queryOptions.page,
+                totalPages: Math.ceil(totalCount / 50)
+            };
+            loadComparePaging(pagingOptions);
+            updatePaging(pagingOptions);
             loadMatchList(results);
         });
 });

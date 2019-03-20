@@ -12,7 +12,7 @@ export function updatePaging(pagingOptions) {
     nextButton.disabled = pagingOptions.currentPage === pagingOptions.totalPages;
 }
 
-function updateQuery(pagingOptions) {
+export function updateQuery(pagingOptions) {
     const existingQuery = window.location.hash.slice(1);
     window.location.hash = writePageToQuery(existingQuery, pagingOptions.currentPage);
 }
