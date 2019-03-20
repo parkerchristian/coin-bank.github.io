@@ -3,7 +3,6 @@ const nextButtons = document.querySelectorAll('.next-button');
 const currentPageSpans = document.querySelectorAll('.current-page');
 const totalPageSpans = document.querySelectorAll('.total-pages');
 
-
 const pagingOptions = {
     currentPage: 1,
     totalPages: 10

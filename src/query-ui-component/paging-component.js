@@ -15,7 +15,6 @@ export function updatePaging(pagingOptions) {
 function updateQuery(pagingOptions) {
     const existingQuery = window.location.hash.slice(1);
     window.location.hash = writePageToQuery(existingQuery, pagingOptions.currentPage);
-
 }
 
 export function loadPaging(pagingOptions) {
