@@ -104,6 +104,22 @@ html, body {
     box-shadow: 0 0 20px rgb(255, 217, 0);
     background-color: rgb(240, 215, 69)
 }
+#alpha-button-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+#alpha-button-div input {
+    font-family: 'Bangers', cursive;
+    border: none;
+    background: transparent;
+    margin: 5px;
+    font-size: 20px;
+}
+#alpha-button-div input:hover {
+    color: rgb(152, 6, 6);
+    cursor: pointer;
+}
 
 #div-footer {
     display: flex;

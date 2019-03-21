@@ -46,7 +46,8 @@ export default function loadCharacterCards(characters) {
                 userFavoriteCharacterRef.set({
                     id: character.id,
                     name: character.name,
-                    thumbnail: character.thumbnail
+                    thumbnail: character.thumbnail,
+                    urls: character.urls
                 });
             }
         });
