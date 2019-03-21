@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat|Oswald:600" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./src/dashboard.css">
     <title>Marvel Matches</title>
 </head>
 <body>
@@ -35,17 +36,17 @@
                 <input type="submit" value="Search" id="submit-button">
             </form>
         </div>
-
+        
+        <div id="alpha-button-div"></div>
         <div id="paging-container" class="hidden">
             <input type="button" id="previous-button" value="&lt; Previous">
             <span id="current-page"></span>
-            of
+            <span>of</span>
             <span id="total-pages"></span>
             <input type="button" id="next-button" value="Next &gt;">
         </div>
 
         <!-- ADDED!! -->
-        <div id="alpha-button-div"></div>
         <div id="heroes-div-container">
             <ul id="heroes-ul"></ul>
         </div>

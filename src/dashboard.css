@@ -1,0 +1,51 @@
+input {
+    font-family: 'Oswald', sans-serif;
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+}
+
+#text-input {
+    border: none;
+    border-bottom: black solid;
+    background: transparent;
+    width: 25vw;
+    font-size: 1.75em;
+    margin-right: 10px;
+    letter-spacing: .02em;
+}
+
+#submit-button {
+    font-size: 1em;
+    width: 100px;
+    border: solid;
+    transition: background .3s, color 0.6s linear;
+    letter-spacing: .05em;
+}
+
+#submit-button:hover {
+    background: rgb(152, 6, 6);
+    color: white;
+    border: solid;
+}
+
+#paging-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#paging-container>* {
+    font-family: 'Oswald', sans-serif; 
+    margin: 5px;
+}
+#paging-container input {
+    font-size: 1em;
+    width: 100px;
+    border: none;
+    background: transparent;
+}
+#paging-container input:hover {
+    transform: scale(1.3);
+}
