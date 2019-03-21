@@ -64,16 +64,34 @@ html, body {
 #heroes-ul li {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 
-    margin: 5px;
+    margin: 8px;
     padding: 3px;
     width: 200px;
+    height: 300px;
     border: solid;
+    border-bottom-right-radius: 10px;
+}
+
+#heroes-ul li:hover {
+    transform: scale(1.05);
+}
+
+#heroes-ul a {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+#heroes-ul a:hover, img:hover {
+    cursor: pointer;
 }
 
 #heroes-ul img {
     width: 200px;
+    border-radius: 3px;
 }
 
 .hidden {
@@ -81,7 +99,8 @@ html, body {
 }
 
 .favorite {
-    border: 2px solid red;
+    box-shadow: 0 0 20px rgb(255, 217, 0);
+    background-color: rgb(240, 215, 69)
 }
 
 #div-footer {
@@ -95,7 +114,6 @@ html, body {
     color: white;
     background: black;
 
-    position: fixed;
     bottom: 0;
     width: 100%;
     height: 70px;
