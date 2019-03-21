@@ -1,3 +1,34 @@
+#comparison-container {
+    background-image: url('../../assets/paperwhite.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+#compare-form {
+    display: flex;
+    justify-content: center;
+}
+
+h2, input {
+    font-family: 'Oswald', sans-serif;
+}
+
+#compare-form select {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+}
+
+#compare-form input {
+    align-self: center;
+    margin-left: 20px;
+}
+
 #match-list {
     display: flex;
     flex-direction: row;
@@ -19,7 +50,7 @@
 }
 
 #match-list img {
-    width: 200px;
+    width: 180px;
     margin-left: 20px;
 }
 

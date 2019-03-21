@@ -64,25 +64,6 @@ html, body {
     color: white;
 }
 
-
-#compare-form {
-    display: flex;
-}
-
-h2, input {
-    font-family: 'Oswald', sans-serif;
-}
-
-#compare-form select {
-    font-family: 'Montserrat', sans-serif;
-    margin: 20px;
-}
-
-#compare-form input {
-    align-self: center;
-    margin-left: 20px;
-}
-
 #heroes-ul {
     display: flex;
     flex-wrap: wrap;
