@@ -90,7 +90,9 @@ html, body {
 }
 
 #heroes-ul img {
-    width: 200px;
+    max-width: 200px;
+    max-height: 250px;
+    
     border-radius: 3px;
 }
 
