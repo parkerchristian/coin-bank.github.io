@@ -18,9 +18,22 @@ html, body {
     padding-bottom: 100px;
 }
 
+#user-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    margin: 15px;
+}
+
+#user-display>* {
+    margin: 5px;
+}
+
 #user-display img {
     border-radius: 100%;
     width: 40px;
+    height: 40px;
 }
 
 #div-header {
@@ -44,6 +57,7 @@ html, body {
     font-size: 3.75em;
     letter-spacing: .05em;
     margin-left: 40px;
+    text-shadow: 2px 5px 2px rgb(215, 196, 93);
 }
 
 #nav-links-container {
@@ -58,12 +72,17 @@ html, body {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    transition: color 0.3s linear;
 }
-
+#nav-links-container a:hover {
+    color: rgb(255, 218, 6);
+}
 #nav-links-container a:visited {
     color: white;
 }
-
+#nav-links-container a:visited:hover {
+    color:rgb(255, 218, 6);
+}
 #heroes-ul {
     display: flex;
     flex-wrap: wrap;
