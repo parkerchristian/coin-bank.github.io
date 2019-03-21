@@ -1,11 +1,16 @@
 /* font-family: 'Bangers', cursive;
-font-family: 'Montserrat', sans-serif; */
+font-family: 'Oswald', sans-serif; 
+font-family: 'Montserrat', sans-serif;*/
 
 html, body {
     margin: 0;
     height: 100%;
 }
+
 #main-container {
+    background-image: url('./assets/paperwhite.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     overflow: hidden;
     display: block;
@@ -24,7 +29,7 @@ html, body {
 
     height: 125px;
     border-bottom: solid black 5px;
-    background: rgb(152, 6, 6);
+    background-image: url('./assets/red-background.jpg');
 }
 
 #div-header img {
@@ -59,13 +64,36 @@ html, body {
     color: white;
 }
 
+
+#compare-form {
+    display: flex;
+}
+
+h2, input {
+    font-family: 'Oswald', sans-serif;
+}
+
+#compare-form select {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+}
+
+#compare-form input {
+    align-self: center;
+    margin-left: 20px;
+}
+
+
+
+
+
 #heroes-ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 
     list-style: none;
-    border: solid;
+    
 }
 
 #heroes-ul li {
@@ -122,10 +150,12 @@ html, body {
     background: transparent;
     margin: 5px;
     font-size: 20px;
+
 }
 #alpha-button-div input:hover {
     color: rgb(152, 6, 6);
     cursor: pointer;
+    transform: scale(1.8);
 }
 
 #div-footer {
@@ -137,7 +167,9 @@ html, body {
     font-size: 1.75em;
     letter-spacing: .1em;
     color: white;
-    background: black;
+    background-image: url('./assets/blackfootbackground.jpg');
+    background-size: 100%;
+
 
     bottom: 0;
     width: 100%;
