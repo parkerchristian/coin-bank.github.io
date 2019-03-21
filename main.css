@@ -66,7 +66,6 @@ html, body {
     flex-grow: 1;
     align-self: flex-end;
 }
-
 #nav-links-container a {
     margin: 20px;
     text-decoration: none;
@@ -83,13 +82,22 @@ html, body {
 #nav-links-container a:visited:hover {
     color:rgb(255, 218, 6);
 }
+
+#loading-gif-container {
+    display: flex;
+    justify-content: center;
+}
+#loading-gif {
+    width: 80px;
+    height: 80px;
+}
+
 #heroes-ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 
     list-style: none;
-    
 }
 
 #heroes-ul li {
