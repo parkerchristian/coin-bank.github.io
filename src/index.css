@@ -1,9 +1,8 @@
-
-
 html, body {
     margin: 0;
     height: 100%;
 }
+
 #div-header {
     display: flex;
     align-items: center;
@@ -54,7 +53,6 @@ html, body {
     overflow: hidden;
     display: block;
     position: relative;
-    
 }
 
 #gif-container {
@@ -65,7 +63,6 @@ html, body {
     min-height: 50vh;
     animation-duration: 5s;
     animation-fill-mode: both;
-
 }
 
 @keyframes fadeOut {
@@ -75,7 +72,6 @@ html, body {
     100% {
         opacity: 0;
     }
-
 }
 
 .fadeOut {
@@ -89,14 +85,6 @@ main {
     justify-content: center;
 }
 
-#splash-gif {
-
-}
-
-.invisible {
-    /* visibility: hidden; */
-}
-
 #div-footer {
     display: flex;
     justify-content: space-between;
@@ -108,7 +96,6 @@ main {
     color: white;
     background-image: url('../assets/blackfootbackground.jpg');
     background-size: 100%;
-
 
     bottom: 0;
     width: 100%;
