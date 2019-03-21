@@ -16,6 +16,7 @@ loadFooter();
 const selectOneContainer = document.getElementById('select-one');
 const selectTwoContainer = document.getElementById('select-two');
 const compareForm = document.getElementById('compare-form');
+const submitButton = document.getElementById('submit-button');
 
 function loadSelectOption(select, favoriteList) {
     const dom = makeSelectOptionTemplate(favoriteList);
@@ -25,13 +26,24 @@ function loadSelectOption(select, favoriteList) {
 auth.onAuthStateChanged(user => {
     const userFavoriteListRef = favoritesByUserRef.child(user.uid);
     userFavoriteListRef.on('value', snapshot => {
+        const comparePrompt = document.getElementById('compare-prompt');
+        
         const value = snapshot.val();
         let favoriteList = null;
         if(value) {
             favoriteList = objectToArray(value);
-            loadSelectOption(selectOneContainer, favoriteList);
-            loadSelectOption(selectTwoContainer, favoriteList);
-            loadSelectEventListeners();
+            if(favoriteList.length < 2) {
+                comparePrompt.classList.remove('hidden');
+            }
+            else {
+                submitButton.classList.remove('hidden');
+                loadSelectOption(selectOneContainer, favoriteList);
+                loadSelectOption(selectTwoContainer, favoriteList);
+                loadSelectEventListeners();
+            }
+        }
+        else {
+            comparePrompt.classList.remove('hidden');
         }
     });
 });
@@ -70,13 +82,11 @@ compareForm.addEventListener('submit', event => {
 }); 
 
 window.addEventListener('hashchange', () => {
+    const emptySearchPrompt = document.getElementById('empty-search-prompt');
     const existingQuery = window.location.hash.slice(1);
     const queryOptions = readCompareFromQuery(existingQuery);
     const charactersUrl = makeComicsByCharacterUrl(queryOptions);
     const pagingContainers = document.querySelectorAll('.paging-container');
-    pagingContainers.forEach(container => {
-        container.classList.remove('hidden');
-    });
     fetch(charactersUrl)
         .then(response => response.json())
         .then(data => {
@@ -86,8 +96,17 @@ window.addEventListener('hashchange', () => {
                 currentPage: queryOptions.page,
                 totalPages: Math.ceil(totalCount / 50)
             };
-            loadComparePaging(pagingOptions);
-            updatePaging(pagingOptions);
-            loadMatchList(results);
+            if(totalCount > 0) {
+                emptySearchPrompt.classList.add('hidden');
+                loadComparePaging(pagingOptions);
+                updatePaging(pagingOptions);
+                loadMatchList(results);
+                pagingContainers.forEach(container => {
+                    container.classList.remove('hidden');
+                });
+            } else {
+                emptySearchPrompt.classList.remove('hidden');
+
+            }
         });
 });

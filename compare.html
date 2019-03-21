@@ -22,18 +22,22 @@
     <title>Compare Characters</title>
 </head>
 <body>
-
+    <div id="main-container">
     <header></header>
 
     <main>
 
         <div id="profile-display-container"></div>
+        <h2>Select two Characters to Compare</h2>
+        <p id="compare-prompt" class="prompt hidden">You need to favorite at least two characters to use this feature.</p>
 
         <form id="compare-form">
             <div id="select-one"></div>
             <div id="select-two"></div>
-            <input id="submit-button" disabled type="submit" value="Compare">
+            <input id="submit-button" disabled type="submit" value="Compare" class="hidden">
         </form>
+
+        <p class="prompt hidden" id="empty-search-prompt">These characters aren't in a comic together. Maybe you should write your own comic! </p>
 
         <div class="paging-container hidden">
             <input type="button" class="previous-button" value="&lt; Previous">
@@ -55,6 +59,7 @@
             
     </main>
     <footer></footer>
+    </div>
 <script type="module" src="./src/compare/compare.js"></script>
 </body>
 </html>
