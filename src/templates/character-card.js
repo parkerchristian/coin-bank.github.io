@@ -5,7 +5,7 @@ export function makeCharacterCard(character) {
     const html = `
         <li>
             <img src="${character.thumbnail.path}.${character.thumbnail.extension}">
-            <p>${character.name}</p>
+            <a href="${ character.urls[0].url }"><p>${character.name}</p></a>
         </li>
     `;
 

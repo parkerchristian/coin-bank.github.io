@@ -11,13 +11,14 @@ test('make character card template', assert => {
             path: 'http://i.annihil.us/u/prod/marvel/i/mg/8/60/4c0035beb0c55',
             extension: 'jpg'
         },
-        name: 'Squirrel Girl'
+        name: 'Squirrel Girl',
+        urls: [{ url: 'google.com' }]
     };
 
     const expected = `
         <li>
             <img src="http://i.annihil.us/u/prod/marvel/i/mg/8/60/4c0035beb0c55.jpg">
-            <p>Squirrel Girl</p>
+            <a href="google.com"><p>Squirrel Girl</p></a> 
         </li>
     `;
     // act

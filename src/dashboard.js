@@ -26,6 +26,7 @@ function fetchAPI(url) {
         .then(response => response.json())
         .then(data => {
             const characters = data.data.results;
+            console.log('!!', characters);
             const totalCount = data.data.total;
             const offset = data.data.offset;
             const pagingOptions = {
