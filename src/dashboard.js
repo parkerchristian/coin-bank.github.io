@@ -8,6 +8,7 @@ import { loadPaging, updatePaging } from './query-ui-component/paging-component.
 import { loadHeader, loadFooter } from './templates/banners.js';
 import './alpha-buttons/alpha-buttons.js';
 import { auth } from './firebase/firebase.js';
+import clearContainer from './templates/clear-container.js';
 
 loadHeader();
 loadUserProfile();
@@ -29,11 +30,20 @@ function loadSearch() {
     const url = makeCharacterUrl(queryOptions);
     fetchAPI(url);
 }
+
+const loadingGif = document.getElementById('loading-gif-container');
+const heroesUl = document.getElementById('heroes-ul');
+
 function fetchAPI(url) {
+    loadingGif.classList.remove('hidden');
+    clearContainer(heroesUl);
+    
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            //if !data call loading
+            
+            loadingGif.classList.add('hidden');
+            
             const characters = data.data.results;
             const totalCount = data.data.total;
             const offset = data.data.offset;

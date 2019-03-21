@@ -8,6 +8,7 @@ import { writeCompareToQuery, readCompareFromQuery } from '../query/query-compon
 import { updatePaging, loadComparePaging } from './paging.js';
 import { loadFooter, loadHeader } from '../templates/banners.js';
 import loadUserProfile from '../templates/user-profile.js';
+import clearContainer from '../templates/clear-container.js';
 
 loadHeader();
 loadUserProfile();
@@ -17,6 +18,7 @@ const selectOneContainer = document.getElementById('select-one');
 const selectTwoContainer = document.getElementById('select-two');
 const compareForm = document.getElementById('compare-form');
 const submitButton = document.getElementById('submit-button');
+const matchList = document.getElementById('match-list');
 
 function loadSelectOption(select, favoriteList) {
     const dom = makeSelectOptionTemplate(favoriteList);
@@ -87,9 +89,14 @@ window.addEventListener('hashchange', () => {
     const queryOptions = readCompareFromQuery(existingQuery);
     const charactersUrl = makeComicsByCharacterUrl(queryOptions);
     const pagingContainers = document.querySelectorAll('.paging-container');
+    const loadingGifContainer = document.getElementById('loading-gif-container');
+    loadingGifContainer.classList.remove('hidden');
+    clearContainer(matchList);
+
     fetch(charactersUrl)
         .then(response => response.json())
         .then(data => {
+            loadingGifContainer.classList.add('hidden');
             const results = data.data.results;
             const totalCount = data.data.total;
             const pagingOptions = {
