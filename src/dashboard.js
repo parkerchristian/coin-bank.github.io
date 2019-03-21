@@ -12,22 +12,22 @@ import { auth } from './firebase/firebase.js';
 loadHeader();
 loadUserProfile();
 loadFooter();
+
 auth.onAuthStateChanged(() => {
     loadSearch();
 });
 
 window.addEventListener('hashchange', () => {
     loadSearch();
+    const pagingContainer = document.getElementById('paging-container');
+    pagingContainer.classList.remove('hidden');
 });
 
 function loadSearch() {
     const existingQuery = window.location.hash.slice(1);
     const queryOptions = readFromQuery(existingQuery);
     const url = makeCharacterUrl(queryOptions);
-    const pagingContainer = document.getElementById('paging-container');
-    pagingContainer.classList.remove('hidden');
     fetchAPI(url);
-      
 }
 function fetchAPI(url) {
     fetch(url)

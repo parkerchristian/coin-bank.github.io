@@ -30,7 +30,9 @@ input {
     color: white;
     border: solid;
 }
-
+.hidden {
+    display: none !important;
+}
 #paging-container {
     display: flex;
     justify-content: center;
@@ -49,3 +51,4 @@ input {
 #paging-container input:hover {
     transform: scale(1.3);
 }
+

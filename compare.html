@@ -28,21 +28,26 @@
     <main>
 
         <div id="profile-display-container"></div>
-        <h2>Select two Characters to Compare</h2>
-        <p id="compare-prompt" class="prompt hidden">You need to favorite at least two characters to use this feature.</p>
 
+        <div class="center">
+            <h2>Select two Characters to Compare</h2>
+            <p id="compare-prompt" class="prompt hidden">You need to favorite at least two characters to use this feature.</p>
+        </div>
+            
         <form id="compare-form">
             <div id="select-one"></div>
             <div id="select-two"></div>
             <input id="submit-button" disabled type="submit" value="Compare" class="hidden">
         </form>
 
-        <p class="prompt hidden" id="empty-search-prompt">These characters aren't in a comic together. Maybe you should write your own comic! </p>
-
-        <div class="paging-container hidden">
+        <div class="center">
+            <p class="prompt hidden" id="empty-search-prompt">These characters aren't in a comic together. Maybe you should write your own comic! </p>
+        </div>
+            
+            <div class="paging-container hidden">
             <input type="button" class="previous-button" value="&lt; Previous">
             <span class="current-page"></span>
-            of
+            <span>of</span>
             <span class="total-pages"></span>
             <input type="button" class="next-button" value="Next &gt;">
         </div>
@@ -52,7 +57,7 @@
         <div class="paging-container hidden">
             <input type="button" class="previous-button" value="&lt; Previous">
             <span class="current-page"></span>
-            of
+            <span>of</span>
             <span class="total-pages"></span>
             <input type="button" class="next-button" value="Next &gt;">
         </div>
