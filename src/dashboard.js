@@ -6,25 +6,34 @@ import { makeCharacterUrl } from './api-url/api-url.js';
 import './query-ui-component/paging-component.js';
 import { loadPaging, updatePaging } from './query-ui-component/paging-component.js';
 import { loadHeader, loadFooter } from './templates/banners.js';
-
+import './alpha-buttons/alpha-buttons.js';
+import { auth } from './firebase/firebase.js';
 
 loadHeader();
 loadUserProfile();
 loadFooter();
+auth.onAuthStateChanged(() => {
+    loadSearch();
+});
 
 window.addEventListener('hashchange', () => {
+    loadSearch();
+});
+
+function loadSearch() {
     const existingQuery = window.location.hash.slice(1);
     const queryOptions = readFromQuery(existingQuery);
     const url = makeCharacterUrl(queryOptions);
     const pagingContainer = document.getElementById('paging-container');
     pagingContainer.classList.remove('hidden');
     fetchAPI(url);
-});
-
+      
+}
 function fetchAPI(url) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            //if !data call loading
             const characters = data.data.results;
             const totalCount = data.data.total;
             const offset = data.data.offset;
