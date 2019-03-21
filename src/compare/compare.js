@@ -31,9 +31,22 @@ auth.onAuthStateChanged(user => {
             favoriteList = objectToArray(value);
             loadSelectOption(selectOneContainer, favoriteList);
             loadSelectOption(selectTwoContainer, favoriteList);
+            loadSelectEventListeners();
         }
     });
 });
+
+function loadSelectEventListeners() {
+    const selects = document.querySelectorAll('select');
+    const submitButton = document.getElementById('submit-button');
+    selects.forEach(select => {
+        select.addEventListener('change', () => {
+            if(selects[0].options[selects[0].selectedIndex].value !== 'null' && selects[1].options[selects[1].selectedIndex].value !== 'null') {
+                submitButton.disabled = false;
+            }
+        });
+    });
+}
 
 compareForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -42,7 +55,7 @@ compareForm.addEventListener('submit', event => {
     const characterOne = selectOne.options[selectOne.selectedIndex].value;
     const characterTwo = selectTwo.options[selectTwo.selectedIndex].value;
     
-    // TODO disable compare button
+    
     if((!characterOne) || (!characterTwo)) {
         return;
     } 
