@@ -2,6 +2,29 @@ input {
     font-family: 'Oswald', sans-serif;
 }
 
+#instruction-text {
+    position: relative;
+    top: -60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Oswald', sans-serif; 
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align:  center;
+    margin: 0 0 40px 0;
+    width: 50vw;
+}
+
 #search-container {
     display: flex;
     justify-content: center;
@@ -51,4 +74,3 @@ input {
 #paging-container input:hover {
     transform: scale(1.3);
 }
-

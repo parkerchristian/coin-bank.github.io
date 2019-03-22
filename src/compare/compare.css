@@ -18,7 +18,11 @@ h2 {
     font-size: 2em;
 }
 
-p {
+/* h3 {
+    font-family: 
+} */
+
+p, h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
 }
