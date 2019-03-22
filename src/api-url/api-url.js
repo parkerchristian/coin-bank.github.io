@@ -1,6 +1,9 @@
 const API_KEY = '23d38bd86abd4d9b4c8a0605bf740b2a';
 
 export function makeCharacterUrl(queryOptions) {
+    if(!queryOptions.name) {
+        return '';
+    }
     const BASE_URL = 'https://gateway.marvel.com/v1/public/characters';
     const url = new URL(BASE_URL);
     url.searchParams.set('nameStartsWith', queryOptions.name);

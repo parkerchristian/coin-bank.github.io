@@ -28,6 +28,11 @@ h3 {
     width: 50vw;
 }
 
+#search-prompt {
+    font-family: 'Montserrat', sans-serif;
+    text-align:  center;
+}
+
 #search-container {
     display: flex;
     justify-content: center;

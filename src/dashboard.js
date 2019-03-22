@@ -10,6 +10,8 @@ import './alpha-buttons/alpha-buttons.js';
 import { auth } from './firebase/firebase.js';
 import clearContainer from './templates/clear-container.js';
 
+const pagingContainer = document.getElementById('paging-container');
+
 loadHeader();
 loadUserProfile();
 loadFooter();
@@ -20,8 +22,6 @@ auth.onAuthStateChanged(() => {
 
 window.addEventListener('hashchange', () => {
     loadSearch();
-    const pagingContainer = document.getElementById('paging-container');
-    pagingContainer.classList.remove('hidden');
 });
 
 function loadSearch() {
@@ -33,11 +33,16 @@ function loadSearch() {
 
 const loadingGif = document.getElementById('loading-gif-container');
 const heroesUl = document.getElementById('heroes-ul');
+const searchPrompt = document.getElementById('search-prompt');
 
 function fetchAPI(url) {
-    loadingGif.classList.remove('hidden');
     clearContainer(heroesUl);
-    
+    if(!url) {
+        return;
+    } 
+    loadingGif.classList.remove('hidden');
+    pagingContainer.classList.remove('hidden');
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -51,8 +56,14 @@ function fetchAPI(url) {
                 currentPage: Math.floor(offset / 20) + 1,
                 totalPages: Math.ceil(totalCount / 20)
             };
-            loadPaging(pagingOptions);
-            updatePaging(pagingOptions);
-            loadCharacterCards(characters);
+            if(totalCount > 0) {
+                searchPrompt.classList.add('hidden');
+                loadPaging(pagingOptions);
+                updatePaging(pagingOptions);
+                loadCharacterCards(characters);
+            } else {
+                searchPrompt.classList.remove('hidden');
+                pagingContainer.classList.add('hidden');
+            }
         });
 }
