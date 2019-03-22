@@ -3,13 +3,25 @@ main {
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+    margin-top: 40px;
 }
+
 
 .about {
     margin: 10px;
     border: solid;
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
 }
+ .left {
+     margin-left: 100px
+ }
 
+.right {
+    align-self: flex-end;
+    margin-right: 100px;
+}
 .about img {
     width: 250px;
     height: 300px;
