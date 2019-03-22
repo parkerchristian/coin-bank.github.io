@@ -145,6 +145,13 @@ html, body {
     box-shadow: 0 0 20px rgb(255, 217, 0);
     background-color: rgb(240, 215, 69)
 }
+
+#instructions {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
 #alpha-button-div {
     display: flex;
     justify-content: center;
