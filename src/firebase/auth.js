@@ -6,6 +6,7 @@ ui.start('#auth-container', {
     signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID
     ],
     signInSuccessUrl: './dashboard.html',
     credentialHelper: firebaseui.auth.CredentialHelper.NONE,
