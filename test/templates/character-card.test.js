@@ -28,5 +28,3 @@ test('make character card template', assert => {
     // assert
     assert.htmlEqual(result, expected);
 });
-
-

@@ -73,7 +73,6 @@ compareForm.addEventListener('submit', event => {
     if((!characterOne) || (!characterTwo)) {
         return;
     } 
-    // DO IT
 
     const characterIDs = [characterOne, characterTwo];
     

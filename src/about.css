@@ -2,7 +2,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     margin-top: 40px;
     font-family: 'Oswald', sans-serif;
 }
@@ -29,6 +28,7 @@ p {
     align-self: flex-end;
     margin-right: 100px;
 }
+
 .about img {
     width: 250px;
     height: 300px;
