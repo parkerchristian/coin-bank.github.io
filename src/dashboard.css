@@ -34,6 +34,8 @@ h3 {
     border: none;
     border-bottom: black solid;
     background: transparent;
+
+    /* background-image: url('../assets/searchbackground.jpg'); */
     width: 25vw;
     font-size: 1.75em;
     margin-right: 10px;

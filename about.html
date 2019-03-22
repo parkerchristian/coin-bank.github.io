@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136589866-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136589866-1');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat|Oswald:600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./src/about.css">
     <title>Team Coin Bank</title>
 </head>
 <body>
-
+    <div id="main-container">
     <header>
     </header>
 
     <main>
-        <div>
-            <img src="">
-            <p>This is Parker</p>
+        <div class="about">
+            <img src="./assets/parker-gambit.webp">
+            <p>Parker:</p>
+            <p>I like TURTLES !!</p>
         </div>
-        <div>
-            <img src="">
-            <p>This is Peter</p>
+        <div class="about">
+            <img src="./assets/nightcrawler.png">
+            <p>Peter:</p>
+            <p>Stars !!</p>
         </div>
-        <div>
-            <img src="">
-            <p>This is Ali</p>
+        <div class="about">
+            <img src="./assets/ali-squirrel.jpg">
+            <p>Ali:</p>
+            <p>Ali Muñiz is a human with the proportional strength and speed of a geek. He fights crime by morris dancing, choral singing, and playing board games. EATING NUTS & KICKING BUTTS !!</p>
         </div>
-        <div>
-            <img src="">
-            <p>This is Marty</p>
+        <div class="about">
+            <img src="./assets/marty-twister.jpg">
+            <p>Marty:</p>
+            <p>Texas is the bestest !!</p>
         </div>
 
     </main>
     <footer></footer>
+    </div>
 <script type="module" src="./src/about.js"></script>
 </body>
 </html>
