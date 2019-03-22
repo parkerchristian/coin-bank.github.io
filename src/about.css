@@ -4,8 +4,12 @@ main {
     justify-content: center;
     /* align-items: center; */
     margin-top: 40px;
+    font-family: 'Oswald', sans-serif;
 }
 
+p {
+    margin: 9px;
+}
 
 .about {
     margin: 10px;
@@ -13,7 +17,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 500px;
+    border-radius: 5px;
+    box-shadow: 5px 10px;
 }
+
  .left {
      margin-left: 100px
  }
@@ -25,4 +32,6 @@ main {
 .about img {
     width: 250px;
     height: 300px;
+    margin: 8px;
+    border-radius: 5px;
 }

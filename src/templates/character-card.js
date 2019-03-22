@@ -6,6 +6,7 @@ export function makeCharacterCard(character) {
         <li>
             <img src="${character.thumbnail.path}.${character.thumbnail.extension}">
             <a href="${ character.urls[0].url }"><p>${character.name}</p></a>
+            <p>Total Comics: ${ character.hasOwnProperty('totalComics') ? character.totalComics : character.comics.available }</p>
         </li>
     `;
 
@@ -47,7 +48,8 @@ export default function loadCharacterCards(characters) {
                     id: character.id,
                     name: character.name,
                     thumbnail: character.thumbnail,
-                    urls: character.urls
+                    urls: character.urls,
+                    totalComics: character.comics.available
                 });
             }
         });

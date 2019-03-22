@@ -111,7 +111,7 @@ html, body {
     margin: 8px;
     padding: 3px;
     width: 200px;
-    height: 300px;
+    height: 325px;
     border: solid;
     border-bottom-right-radius: 10px;
 }
@@ -124,6 +124,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     color: black;
     text-align: center;
+    margin-bottom: 0;
 }
 
 #heroes-ul a:hover, img:hover {
@@ -132,9 +133,12 @@ html, body {
 
 #heroes-ul img {
     max-width: 200px;
-    max-height: 250px;
-    
+    max-height: 200px;
     border-radius: 3px;
+}
+
+#heroes-ul p {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .hidden {
