@@ -17,6 +17,10 @@ html, body {
     display: flex;
     align-items: center;
 
+    position: absolute;
+    z-index: 100;
+
+    width: 100vw;
     height: 125px;
     border-bottom: solid black 5px;
     background-image: url('../assets/red-background.jpg');
@@ -26,13 +30,13 @@ html, body {
     align-self: flex-start;
 
     height: 125%;
-    width: 350px;
+    width: 420px;
 }
 
 #div-header h1 {
     font-family: 'Bangers', cursive;
-    font-size: 3.75em;
-    letter-spacing: .05em;
+    font-size: 4.25em;
+    letter-spacing: .08em;
     margin-left: 40px;
     text-shadow: 2px 5px 2px rgb(215, 196, 93);
 }
@@ -45,28 +49,27 @@ html, body {
     align-self: flex-end;
 }
 
-#nav-links-container a {
-    margin: 20px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-}
-
-#nav-links-container a:visited {
-    color: white;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #gif-container {
+    height: 78vh;
+    width: 100vw;
     background-image: url('../assets/marvel-giphy.gif');
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    min-height: 50vh;
-    animation-duration: 5s;
+    background-size: 100vw 78vh;
+    position: absolute;
+    z-index: 1;
+    top: 128px;
+    
+    animation: fade 5s alternate infinite;
     animation-fill-mode: both;
 }
-
-@keyframes fadeOut {
+@keyframes fade {
     0% {
         opacity: 1;
     }
@@ -75,19 +78,15 @@ html, body {
     }
 }
 
-.fadeOut {
-    animation-name: fadeOut;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.fade {
+    animation-name: fade;
 }
 
 #auth-container {
-    margin-top: -16px; 
+    position: absolute;
+    z-index: 2;
+    left: 43vw;
+    top: 43vh; 
 }
 
 #div-footer {
@@ -107,6 +106,7 @@ main {
     height: 70px;
     border: solid black;
     position: absolute;
+    z-index: 100;
 }
 
 #div-footer span {
