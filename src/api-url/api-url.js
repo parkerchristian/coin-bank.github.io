@@ -1,4 +1,6 @@
 const API_KEY = '23d38bd86abd4d9b4c8a0605bf740b2a';
+// Parker's Key below
+// const API_KEY = '2aef67165d6b6b8f6a107507ce8f06a0';
 
 export function makeCharacterUrl(queryOptions) {
     if(!queryOptions.name) {

@@ -11,6 +11,9 @@ html, body {
     overflow: hidden;
     display: block;
     position: relative;
+}
+
+main {
     padding-bottom: 100px;
 }
 
@@ -18,18 +21,38 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    position: absolute;
+    z-index: 100;
+    position: relative;
     height: 50px;
     margin: 15px;
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
 }
 
 #user-display>* {
     margin: 5px;
 }
 
+#user-display input {
+    font-size: .6em;
+    width: 6em;
+    border-radius: 6px;
+    transition: background .3s, color 0.6s linear;
+    letter-spacing: .09em;
+}
+#user-display input:hover {
+    background: black;
+    color: white;
+    transform: scale(1.1);
+}
+
 #user-display img {
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 #div-header {
@@ -45,12 +68,12 @@ html, body {
     align-self: flex-start;
 
     height: 125%;
-    width: 350px;
+    width: 420px;
 }
 
 #div-header h1 {
     font-family: 'Bangers', cursive;
-    font-size: 3.75em;
+    font-size: 4.25em;
     letter-spacing: .05em;
     margin-left: 40px;
     text-shadow: 2px 5px 2px rgb(215, 196, 93);
@@ -66,6 +89,7 @@ html, body {
     margin: 20px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
     color: white;
     transition: color 0.3s linear;
 }
@@ -77,73 +101,6 @@ html, body {
 }
 #nav-links-container a:visited:hover {
     color:rgb(255, 218, 6);
-}
-
-#loading-gif-container {
-    display: flex;
-    justify-content: center;
-}
-
-#loading-gif {
-    width: 80px;
-    height: 80px;
-    margin-top: 40px;
-}
-
-#heroes-ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    list-style: none;
-}
-
-#heroes-ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    margin: 8px;
-    padding: 3px;
-    width: 200px;
-    height: 325px;
-    border: solid;
-    border-bottom-right-radius: 10px;
-}
-
-#heroes-ul li:hover {
-    transform: scale(1.05);
-}
-
-#heroes-ul a {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-#heroes-ul a:hover, img:hover {
-    cursor: pointer;
-}
-
-#heroes-ul img {
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 3px;
-}
-
-#heroes-ul p {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.hidden {
-    display: none;
-}
-
-.favorite {
-    box-shadow: 0 0 20px rgb(255, 217, 0);
-    background-color: rgb(240, 215, 69)
 }
 
 #instructions {
@@ -162,13 +119,72 @@ html, body {
     border: none;
     background: transparent;
     margin: 5px;
-    font-size: 20px;
-
+    font-size: 1.5em;
 }
 #alpha-button-div input:hover {
     color: rgb(152, 6, 6);
     cursor: pointer;
     transform: scale(1.8);
+}
+
+#loading-gif-container {
+    display: flex;
+    justify-content: center;
+}
+#loading-gif {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+}
+
+#heroes-ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    list-style: none;
+}
+#heroes-ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 8px;
+    padding: 3px;
+    width: 200px;
+    height: 325px;
+    border: solid;
+    border-bottom-right-radius: 10px;
+}
+#heroes-ul li:hover {
+    transform: scale(1.05);
+}
+#heroes-ul a {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+    margin-bottom: 0;
+}
+#heroes-ul a:hover, img:hover {
+    cursor: pointer;
+}
+#heroes-ul img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 3px;
+}
+#heroes-ul p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.favorite {
+    box-shadow: 0 0 20px rgb(255, 217, 0);
+    background-color: rgb(240, 215, 69)
+}
+
+.hidden {
+    display: none;
 }
 
 #div-footer {
@@ -183,18 +199,15 @@ html, body {
     background-image: url('./assets/blackfootbackground.jpg');
     background-size: 100%;
 
-
-    bottom: 0;
+    position: absolute;
     width: 100%;
     height: 70px;
     border: solid black;
-    position: absolute;
+    bottom: 0;
 }
-
 #div-footer span {
     margin-right: 20px;
 }
-
 #div-footer img {
     height: 100%;
     margin-left: 3px;
