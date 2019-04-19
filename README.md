@@ -1,2 +1,4 @@
 # coin-bank.github.io
-Team Coin Bank's Bootcamp II Project for Alchemy Code Lab
+Parker's version 2.0 of
+Team Coin Bank's Bootcamp II Project for
+Alchemy Code Lab
