@@ -30,24 +30,27 @@
         <div id="profile-display-container"></div>
 
     <div id="content-container">
+        <div id="head-text-flex">
+            <div class="center" id="instructions">
+                <h2>Select two Characters to Compare</h2>
+                <h3>Click Compare to see which comics they appear in together</h3>
+                <p id="compare-prompt" class="prompt hidden">You need to favorite at least two characters to use this feature.</p>
+            </div>
+        </div>
 
-        <div class="center">
-            <h2>Select two Characters to Compare</h2>
-            <h3>Click Compare to see which comics they appear in together</h3>
-            <p id="compare-prompt" class="prompt hidden">You need to favorite at least two characters to use this feature.</p>
+        <div id="compare-form-flex">
+            <form id="compare-form">
+                <div id="select-one"></div>
+                <div id="select-two"></div>
+                <input id="submit-button" disabled type="submit" value="Compare" class="hidden">
+            </form>
         </div>
             
-        <form id="compare-form">
-            <div id="select-one"></div>
-            <div id="select-two"></div>
-            <input id="submit-button" disabled type="submit" value="Compare" class="hidden">
-        </form>
-
         <div class="center">
             <p class="prompt hidden" id="empty-search-prompt">These characters aren't in a comic together. Maybe you should write your own comic! </p>
         </div>
             
-        <div class="paging-container hidden">
+        <div class="paging-container hidden" id="top-paging">
             <input type="button" class="previous-button" value="&lt; Previous">
             <span class="current-page"></span>
             <span>of</span>
@@ -59,7 +62,7 @@
 
         <ul id="match-list"></ul>
 
-        <div class="paging-container hidden">
+        <div class="paging-container hidden" id="bottom-paging">
             <input type="button" class="previous-button" value="&lt; Previous">
             <span class="current-page"></span>
             <span>of</span>

@@ -1,3 +1,355 @@
+/**** MOBILE VERTICAL ****/
+/* @media only screen and (max-width: 415px) { */
+html, body {
+    margin: 0;
+    height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-image: url('../assets/paperwhite.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+#div-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    z-index: 3;
+    position: relative;
+
+    width: 100vw;
+    height: 8em;
+    border-bottom: solid black 5px;
+    background-image: url('../assets/red-background.jpg');
+}
+#div-header img {
+    align-self: flex-start;
+    align-self: center;
+    position: absolute;
+    z-index: 5;
+    position: relative;
+
+    margin-top: -3em;
+    height: 10em;
+    width: 100vw;
+}
+
+#div-header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.8em;
+    letter-spacing: .08em;
+    /* margin-left: 40px; */
+    text-shadow: 2px 5px 2px rgb(215, 196, 93);
+    position: absolute;
+    z-index: 5;
+    position: relative;
+}
+
+#nav-links-container {
+    display: flex;
+    /* display: none; */
+    visibility: hidden;
+    justify-content: center;
+    flex-grow: 1;
+    align-self: flex-end;
+    position: absolute;
+    z-index: 5;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gif-container {
+    height: 40vh;
+    width: 100vw;
+    background-image: url('../assets/marvel-giphy.gif');
+    background-repeat: no-repeat;
+    background-size: 100vw 40vh;
+    position: absolute;
+    z-index: 1;
+    top: 35vh;
+    
+    animation: fade 5s alternate infinite;
+    animation-fill-mode: both;
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade {
+    animation-name: fade;
+}
+
+#auth-container {
+    position: absolute;
+    z-index: 2;
+    position: relative;
+    top: 48vh; 
+    
+    /* justify-content: center;
+    align-items: center;
+    align-self: center; */
+    /* text-align: center; */
+    /* left: 20vw; */
+}
+#gif-container {
+    height: 40vh;
+    width: 100vw;
+    background-image: url('../assets/marvel-giphy.gif');
+    background-repeat: no-repeat;
+    background-size: 100vw 40vh;
+    position: absolute;
+    z-index: 1;
+    top: 22vh;
+    
+    animation: fade 5s alternate infinite;
+    animation-fill-mode: both;
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade {
+    animation-name: fade;
+}
+
+#div-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Bangers', cursive;
+    font-size: 1.20em;
+    letter-spacing: .1em;
+    color: white;
+    background-image: url('../assets/blackfootbackground.jpg');
+    background-size: 100%;
+
+    bottom: 0;
+    width: 100%;
+    height: 3.5em;
+    border: solid black;
+    position: absolute;
+    z-index: 100;
+}
+
+#div-footer span {
+    margin-right: .5em;
+    text-align: right;
+    width: 45vw;
+}
+
+#div-footer img {
+    height: 100%;
+    width: 8em;
+    margin-left: 3px;
+}
+/* } */
+
+@media only screen and (max-height: 672px) {
+    #gif-container {
+        height: 60vh;
+        width: 100vw;
+        background-image: url('../assets/marvel-giphy.gif');
+        background-repeat: no-repeat;
+        background-size: 100vw 60vh;
+        position: absolute;
+        z-index: 1;
+        top: 30vh;
+        
+        animation: fade 5s alternate infinite;
+        animation-fill-mode: both;
+    }
+    @keyframes fade {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .fade {
+        animation-name: fade;
+    }
+
+    #auth-container {
+        position: absolute;
+        z-index: 2;
+        position: relative;
+        top: 20vh; 
+        
+        /* justify-content: center;
+        align-items: center;
+        align-self: center; */
+        /* text-align: center; */
+        /* left: 20vw; */
+    }
+}
+
+/**** LANDSCAPE MOBILE ****/
+@media only screen and (min-width: 703px) {
+    html, body {
+        margin: 0;
+        height: 100%;
+    }
+    
+    #main-container {
+        background-image: url('../assets/paperwhite.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        overflow: hidden;
+        display: block;
+        position: relative;
+    }
+    
+    #div-header {
+        display: flex;
+        align-items: center;
+    
+        position: absolute;
+        z-index: 100;
+    
+        width: 100vw;
+        height: 5em;
+        border-bottom: solid black 5px;
+        background-image: url('../assets/red-background.jpg');
+    }
+    
+    #div-header img {
+        align-self: flex-end;
+        top: -5.5em;
+        height: 125%;
+        width: 20em;
+    }
+    
+    #div-header h1 {
+        align-self: flex-start;
+        font-family: 'Bangers', cursive;
+        top: -.35em;
+        font-size: 3.25em;
+        letter-spacing: .08em;
+        margin-left: .4em;
+        text-shadow: 2px 5px 2px rgb(215, 196, 93);
+    }
+    
+    #nav-links-container {
+        display: flex;
+        visibility: hidden;
+        justify-content: center;
+        flex-grow: 1;
+        align-self: flex-end;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #gif-container {
+        height: 100vh;
+        width: 100vw;
+        background-image: url('../assets/marvel-giphy.gif');
+        background-repeat: no-repeat;
+        background-size: 100vw 70vh;
+        position: absolute;
+        z-index: 1;
+        top: 4.95em;
+        
+        animation: fade 5s alternate infinite;
+        animation-fill-mode: both;
+    }
+    @keyframes fade {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .fade {
+        animation-name: fade;
+    }
+    
+    #auth-container {
+        position: absolute;
+        z-index: 2;
+        position: relative;
+        top: 7.4em; 
+    }
+    
+    #div-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        font-family: 'Bangers', cursive;
+        font-size: 1.15em;
+        letter-spacing: .1em;
+        color: white;
+        background-image: url('../assets/blackfootbackground.jpg');
+        background-size: 100%;
+    
+        bottom: 0;
+        width: 100%;
+        height: 11vh;
+        border: solid black;
+        position: absolute;
+        z-index: 100;
+    }
+    
+    #div-footer span {
+        margin-right: 20px;
+    }
+    
+    #div-footer img {
+        height: 100%;
+        width: 8em;
+        margin-left: 3px;
+    }
+}
+
+
+/* @media (max-width: 707px) and (min-width: 935px) {
+    #div-header h1 {
+        font-size: 3.25em;
+    }
+} */
+
+
+
+/***** WEBSITE *****/
+@media only screen and (min-width: 820px) {
 html, body {
     margin: 0;
     height: 100%;
@@ -16,9 +368,9 @@ html, body {
 #div-header {
     display: flex;
     align-items: center;
-
     position: absolute;
     z-index: 100;
+    position: relative;
 
     width: 100vw;
     height: 125px;
@@ -27,8 +379,8 @@ html, body {
 }
 
 #div-header img {
-    align-self: flex-start;
-
+    align-self: flex-end;
+    top: -8em;
     height: 125%;
     width: 420px;
 }
@@ -116,4 +468,5 @@ main {
 #div-footer img {
     height: 100%;
     margin-left: 3px;
+}
 }

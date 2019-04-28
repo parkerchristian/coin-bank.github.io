@@ -2,7 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 10em;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -15,17 +15,17 @@ p {
     border: solid;
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
     border-radius: 5px;
     box-shadow: 5px 10px;
 }
 
  .left {
-     margin-left: 100px
+     margin-left: 100px;
+     align-self: center;
  }
 
 .right {
-    align-self: flex-end;
+    align-self: center;
     margin-right: 100px;
 }
 
@@ -34,4 +34,69 @@ p {
     height: 300px;
     margin: 8px;
     border-radius: 5px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(152, 6, 6);
+}
+h3 {
+    text-align: center;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 40px;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    p {
+        margin: 9px;
+    }
+    
+    .about {
+        margin: 10px;
+        border: solid;
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        border-radius: 5px;
+        box-shadow: 5px 10px;
+    }
+    
+     .left {
+         margin-left: 100px;
+         align-self: flex-start;
+     }
+    
+    .right {
+        align-self: flex-end;
+        margin-right: 100px;
+    }
+    
+    .about img {
+        width: 250px;
+        height: 300px;
+        margin: 8px;
+        border-radius: 5px;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(152, 6, 6);
+    }
+    h3 {
+        text-align: center;
+        margin: 0;
+    }
+
+
 }

@@ -25,42 +25,42 @@
 <body>
     <div id="main-container">
     <header></header>
-
-    <main>
-
-        <div id="profile-display-container"></div>
+        <section id="fade-in-container">
+            <main>
         
-        <div id="instruction-text">
-            <h2>Search Marvel Characters</h2><br>
-            <h3>Search by name or browse by first letter. Click on their image to add them to your favorites. Click their name for a link see that character's details. <br><br>You can compare your favorited characters, on the Compare Characters page, to see which comics they appear in together.</h3>
-        </div>
-
-        <div id="search-container">
-            <form id="search-form">
-                <input type="text" id="text-input">
-                <input type="submit" value="Search" id="submit-button">
-            </form>
-        </div>
+                <div id="profile-display-container"></div>
+                
+                <div id="instruction-text">
+                    <h2>Search Marvel Characters</h2><br>
+                    <h3>Search by name or browse by first letter. Click on their image to add them to your favorites. Click their name for a link see that character's details. <br><br>You can compare your favorited characters, on the Compare Characters page, to see which comics they appear in together.</h3>
+                </div>
         
-        <div id="alpha-button-div"></div>
-        <div id="search-prompt" class="hidden">No Results Found</div>
+                <div id="search-container">
+                    <form id="search-form">
+                        <input type="text" id="text-input">
+                        <input type="submit" value="Search" id="submit-button">
+                    </form>
+                </div>
+                
+                <div id="alpha-button-div"></div>
+                <div id="search-prompt" class="hidden">No Results Found</div>
+                
+                <div id="paging-container" class="hidden">
+                    <input type="button" id="previous-button" value="&lt; Previous">
+                    <span id="current-page"></span>
+                    <span>of</span>
+                    <span id="total-pages"></span>
+                    <input type="button" id="next-button" value="Next &gt;">
+                </div>
         
-        <div id="paging-container" class="hidden">
-            <input type="button" id="previous-button" value="&lt; Previous">
-            <span id="current-page"></span>
-            <span>of</span>
-            <span id="total-pages"></span>
-            <input type="button" id="next-button" value="Next &gt;">
-        </div>
-
-        <div id="loading-gif-container" class="hidden"><img src="./assets/loading_big.gif" alt="loading gif" id="loading-gif"></div>
-
-        <div id="heroes-div-container">
-            <ul id="heroes-ul"></ul>
-        </div>
-
-    </main>
-    <footer></footer>
+                <div id="loading-gif-container" class="hidden"><img src="./assets/loading_big.gif" alt="loading gif" id="loading-gif"></div>
+        
+                <div id="heroes-div-container">
+                    <ul id="heroes-ul"></ul>
+                </div>
+            </main>
+            <footer></footer>
+        </section>
     </div>
 <script type="module" src="./src/dashboard.js"></script>
 </body>

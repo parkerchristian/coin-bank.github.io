@@ -9,8 +9,184 @@
     position: relative;
 }
 
+#head-text-flex {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .center {
     text-align: center;
+}
+
+#content-container {
+    position: relative;
+    top: 0;
+    margin-bottom: 18em;
+}
+
+#content-container h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+}
+
+#content-container p, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+
+#compare-form-flex {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 14.5em;
+}
+#compare-form {
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* width: 10vw; */
+    /* margin: 0 -15em 0 -15em;
+    padding: 0 -15em 0 -15em; */
+}
+
+#submit-button {
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    z-index: 500;
+    justify-content: center;
+    justify-self: center;
+    top: -2.5em;
+}
+
+#compare-form select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    position: relative;
+    top: 2em;
+    margin-left: 1.3em;
+    margin-right: -1em;
+    width: 11em;
+}
+#select-one {
+    margin-left: -2.3em;
+}
+#select-two {
+    text-align-last: end;
+}
+
+#submit-button {
+    font-size: 1em;
+    width: 100px;
+    border: solid;
+    border-radius: 4px;
+    transition: background .3s, color 0.6s linear;
+    letter-spacing: .05em;
+    margin: .5em 0;
+}
+
+#submit-button:hover {
+    background: rgb(152, 6, 6);
+    color: white;
+    border: solid;
+}
+
+#match-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 16em;
+    position: relative;
+}
+
+#match-list > li {
+    list-style: none;
+    border: solid;
+    padding: 20px;
+    width: 64vw;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#match-list img {
+    width: 220px;
+}
+
+#match-list div {
+    flex-grow: 1;
+}
+
+.paging-container {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.paging-container>* {
+    font-family: 'Oswald', sans-serif; 
+    margin: 5px;
+}
+.paging-container input {
+    font-size: 1em;
+    width: 100px;
+    border: none;
+    background: transparent;
+}
+.paging-container input:hover {
+    transform: scale(1.3);
+}
+#top-paging {
+    position: relative;
+    top: 16.5em;
+}
+#bottom-paging {
+    position: relative;
+    top: 16.7em;
+}
+.hidden {
+    display: none !important;
+}
+#empty-search-prompt {
+    color: rgb(152, 6, 6);
+    position: relative;
+    top: -1em;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+#comparison-container {
+    background-image: url('../../assets/paperwhite.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+#instructions {
+    top: -1em;
+}
+
+.center {
+    text-align: center;
+}
+#content-container {
+    margin-bottom: 5em;
 }
 #content-container h2 {
     font-family: 'Oswald', sans-serif;
@@ -22,28 +198,51 @@
     font-size: 1.2em;
 }
 
-#compare-form {
+#compare-form-flex {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    position: relative;
+    /* border: solid; */
+    /* position: absolute;
+    z-index: 5; */
+    top: -3em;
+}
+
+#compare-form {
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: center; */
+    /* border: solid; */
+    /* position: center; */
+    /* top: 1em; */
 }
 
 #content-container input {
     font-family: 'Oswald', sans-serif;
+    /* margin-left: -.35em; */
 }
 
 #compare-form select {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif;
     margin: 20px;
-    font-size: 1.2em;
+    font-size: 1.2em; */
+}
+#select-one, #select-two {
+    font-size: 1em;
+    position: relative;
+    margin-left: 5em;
+    margin-right: 5em;
+    /* top: 2em; */
+}
+#select-two {
+    text-align-last: start;
 }
 
 #submit-button {
-    font-size: 1em;
-    width: 100px;
-    border: solid;
-    border-radius: 4px;
-    transition: background .3s, color 0.6s linear;
-    letter-spacing: .05em;
+    /* position: absolute; */
+    top: 1.3em;
+    left: 48.2vw;
 }
 
 #submit-button:hover {
@@ -53,8 +252,8 @@
 }
 
 #compare-form input {
-    align-self: center;
-    margin-left: 20px;
+    /* align-self: center;
+    margin-left: 20px; */
 }
 
 #match-list {
@@ -62,6 +261,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    top: 0;
 }
 
 #match-list > li {
@@ -104,6 +304,19 @@
 .paging-container input:hover {
     transform: scale(1.3);
 }
+#top-paging {
+    position: relative;
+    top: .5em;
+}
+#bottom-paging {
+    position: relative;
+    top: 1em;
+}
 .hidden {
     display: none !important;
+}
+#empty-search-prompt {
+    position: relative;
+    top: 0em;
+}
 }
