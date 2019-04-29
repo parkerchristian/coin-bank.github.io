@@ -116,7 +116,7 @@ main {
 
 #nav-links-container a {
     /* position:relative; */
-    margin: 20px;
+    margin: .85em;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: .91em;

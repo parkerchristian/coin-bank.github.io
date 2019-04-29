@@ -102,8 +102,11 @@ form input {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
-    /* top: -1.5em; */
+    /* border: solid; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 220px;
 }
 #paging-container>* {
     font-family: 'Oswald', sans-serif; 
