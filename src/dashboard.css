@@ -6,7 +6,7 @@ main {
     position: absolute;
     z-index: 1;
     position: relative;
-    top: 12.5em;
+    top: 13.5em;
     width: 90vw;
 
     display: flex;
