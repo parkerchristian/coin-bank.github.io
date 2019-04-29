@@ -102,9 +102,8 @@ form input {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 100;
-    position: relative;
+    /* position: relative; */
+    /* top: -1.5em; */
 }
 #paging-container>* {
     font-family: 'Oswald', sans-serif; 
