@@ -74,6 +74,7 @@ main {
     width: 100vw;
     height: 7em;
     border-bottom: solid black 5px;
+    background: rgb(152, 6, 6);
     background-image: url('../assets/red-background.jpg');
 }
 #div-header img {
@@ -264,6 +265,7 @@ main {
     font-size: 1.20em;
     letter-spacing: .1em;
     color: white;
+    background: black;
     background-image: url('../assets/blackfootbackground.jpg');
     background-size: 100%;
 
