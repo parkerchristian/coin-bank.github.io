@@ -6,7 +6,7 @@ export function makeProfileTemplate(user) {
         <div id="user-display">
             <img src="${image}">
             <p>${user.displayName}</p>
-            <input type="submit" value="Sign Out">
+            <button>Sign Out</button>
         </div>
     `;
 
@@ -21,7 +21,7 @@ export default function loadUserProfile() {
     auth.onAuthStateChanged(user => {
         if(user) {
             const dom = makeProfileTemplate(user);
-            const signOutButton = dom.querySelector('input');
+            const signOutButton = dom.querySelector('button');
             signOutButton.addEventListener('click', () => {
                 auth.signOut();
                 window.location = './index.html';
