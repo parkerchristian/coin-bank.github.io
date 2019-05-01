@@ -54,6 +54,12 @@ main {
     letter-spacing: .02em;
 }
 
+#text-input::placeholder {
+    text-align: center;
+    font-size: .5em;
+    opacity: .75;
+}
+
 form input {
     font-family: 'Oswald', sans-serif;
 }
@@ -174,6 +180,12 @@ form input {
     font-size: 1.75em;
     margin-right: 10px;
     letter-spacing: .02em;
+}
+
+#text-input::placeholder {
+    text-align: center;
+    font-size: .6em;
+    opacity: .5;
 }
 
 form input {
