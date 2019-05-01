@@ -57,6 +57,7 @@ main {
 }
 
 #user-display button {
+    height: 3em;
     font-size: .6em;
     width: 6em;
     border-radius: 6px;
@@ -64,6 +65,7 @@ main {
     letter-spacing: .09em;
 }
 #user-display button:hover {
+    height: 3em;
     background: black;
     color: white;
     transform: scale(1.1);
