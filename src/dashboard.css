@@ -40,7 +40,7 @@ main {
 #search-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     position: relative;
     top: 15em;
 }
@@ -56,6 +56,7 @@ main {
 }
 
 #text-input::placeholder {
+    -webkit-appearance: none;
     align-self: center;
     margin-bottom: 0;
     text-align: center;
@@ -97,11 +98,11 @@ form input {
     margin: 5px;
     font-size: 1.5em;
 }
-#alpha-button-div input:hover {
+/* #alpha-button-div input:hover {
     color: rgb(152, 6, 6);
     cursor: pointer;
     transform: scale(1.8);
-}
+} */
 
 .hidden {
     display: none !important;
