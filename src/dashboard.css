@@ -40,6 +40,7 @@ main {
 #search-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     top: 15em;
 }
@@ -55,6 +56,7 @@ main {
 }
 
 #text-input::placeholder {
+    align-self: center;
     margin-bottom: 0;
     text-align: center;
     font-size: .5em;
@@ -74,11 +76,11 @@ form input {
     letter-spacing: .05em;
 }
 
-#submit-button:hover {
+/* #submit-button:hover {
     background: rgb(152, 6, 6);
     color: white;
     border: solid;
-}
+} */
 
 #alpha-button-div {
     display: flex;
