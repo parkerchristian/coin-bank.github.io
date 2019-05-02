@@ -26,6 +26,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    position: fixed;
     min-height: 100vh;
     overflow: hidden;
     display: block;
