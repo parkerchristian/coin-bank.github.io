@@ -56,11 +56,8 @@ main {
 }
 
 #text-input::placeholder {
-    position: absolute;
-    -webkit-appearance: none;
     align-self: center;
     margin-bottom: 0;
-    top: 5px;
     text-align: center;
     font-size: .5em;
     opacity: .75;
