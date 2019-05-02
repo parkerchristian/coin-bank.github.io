@@ -57,8 +57,11 @@ main {
 }
 
 #user-display button {
+    position: absolute;
+    z-index: 10;
+    top: 5rem;
     /* margin-bottom: 3rem; */
-    font-size: 2rem;
+    font-size: .6rem;
     /* height: 3rem; */
     width: 6rem;
     border-radius: 6px;
@@ -141,12 +144,12 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-size: .91em;
     font-weight: bold;
-    color: red;
+    color: black;
     /* transition: color 0.3s linear; */
 }
 
 #nav-links-container a:visited {
-    color: red;
+    color: black;
 }
 
 
@@ -355,6 +358,8 @@ main {
 }
 
 #user-display button {
+    position: relative;
+    top: 0;
     font-size: .6em;
     width: 6em;
     border-radius: 6px;
@@ -558,7 +563,7 @@ main {
 
 
 }
-@media only screen and (max-width: 1025px) {
+@media screen and (min-width: 768px) and (max-width: 1025px) {
     #user-display {
         display: flex;
         flex-direction: column;
