@@ -4,7 +4,7 @@ html, body {
     background: rgb(0, 0, 0);
 }
 
-@keyframes fade-in-container {
+/* @keyframes fade-in-container {
     0% {
         opacity: 0;
     }
@@ -12,13 +12,13 @@ html, body {
     100% {
         opacity: 1;
     }
-}
+} */
 
-.fade-in-container{
-    /* KEYFRAME FADE IN HERE */
+/* KEYFRAME FADE IN HERE */
+/* .fade-in-container{
     opacity: 1;
     animation: fade 1s;
-}
+} */
  
 
 #main-container {
@@ -57,19 +57,20 @@ main {
 }
 
 #user-display button {
-    height: 3em;
-    font-size: .6em;
-    width: 6em;
+    margin-bottom: 0;
+    font-size: .6rem;
+    height: 3rem;
+    width: 6rem;
     border-radius: 6px;
     transition: background .3s, color 0.6s linear;
     letter-spacing: .09em;
 }
-#user-display button:hover {
-    height: 3em;
+/* #user-display button:hover {
+    height: 3rem;
     background: black;
     color: white;
     transform: scale(1.1);
-}
+} */
 
 #user-display img {
     border-radius: 100%;
@@ -91,6 +92,7 @@ main {
     border-bottom: solid black 5px;
     background: rgb(152, 6, 6);
     background-image: url('../assets/red-background.jpg');
+    margin-bottom: 0;
 }
 #div-header img {
     align-self: flex-start;
@@ -99,6 +101,7 @@ main {
     z-index: 5;
     position: relative;
 
+    margin-bottom: 0;
     margin-top: -7em;
     height: 8em;
     width: 100vw;
@@ -113,7 +116,8 @@ main {
     position: absolute;
     z-index: 5;
     position: relative;
-    top: -.25em;
+    top: -.5rem;
+    margin-bottom: 2rem;
 }
 
 #nav-links-container {

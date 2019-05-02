@@ -55,6 +55,7 @@ main {
 }
 
 #text-input::placeholder {
+    margin-bottom: 0;
     text-align: center;
     font-size: .5em;
     opacity: .75;
