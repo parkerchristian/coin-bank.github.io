@@ -95,7 +95,7 @@ form input {
     font-family: 'Bangers', cursive;
     border: none;
     background: transparent;
-    margin: 5px;
+    margin: 3px;
     font-size: 1.5em;
 }
 /* #alpha-button-div input:hover {
@@ -103,7 +103,12 @@ form input {
     cursor: pointer;
     transform: scale(1.8);
 } */
-
+#loading-gif-container {
+    position: absolute;
+    /* position: relative; */
+    align-self: center;
+    top: 25vh;
+}
 .hidden {
     display: none !important;
 }
@@ -233,6 +238,10 @@ form input {
 
 .hidden {
     display: none !important;
+}
+#loading-gif-container {
+    position: relative;
+    top: 0;
 }
 
 #paging-container {

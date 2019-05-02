@@ -141,7 +141,7 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-size: .91em;
     font-weight: bold;
-    color: black;
+    color: red;
     /* transition: color 0.3s linear; */
 }
 #nav-links-container a:after {
@@ -158,7 +158,7 @@ main {
 }
 
 #nav-links-container a:visited {
-    color: black;
+    color: red;
 }
 
 
