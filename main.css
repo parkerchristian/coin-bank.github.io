@@ -67,7 +67,7 @@ main {
     border-radius: 6px;
     transition: background .3s, color 0.6s linear;
     letter-spacing: .09em;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
 }
 /* #user-display button:hover {
     height: 3rem;

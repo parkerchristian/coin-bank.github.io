@@ -56,9 +56,11 @@ main {
 }
 
 #text-input::placeholder {
+    position: absolute;
     -webkit-appearance: none;
     align-self: center;
     margin-bottom: 0;
+    top: 5px;
     text-align: center;
     font-size: .5em;
     opacity: .75;
@@ -192,6 +194,7 @@ form input {
 }
 
 #text-input::placeholder {
+    position: relative;
     text-align: center;
     font-size: .6em;
     opacity: .5;
@@ -248,6 +251,7 @@ form input {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 0;
 }
 #paging-container>* {
     font-family: 'Oswald', sans-serif; 
