@@ -57,9 +57,9 @@ main {
 }
 
 #user-display button {
-    margin-bottom: 0;
+    /* margin-bottom: 3rem; */
     font-size: .6rem;
-    height: 5vh;
+    height: 3rem;
     width: 6rem;
     border-radius: 6px;
     transition: background .3s, color 0.6s linear;
@@ -97,12 +97,12 @@ main {
 #div-header img {
     align-self: flex-start;
     align-self: center;
-    position: absolute;
-    z-index: 5;
+    /* position: absolute; */
+    /* z-index: 5; */
     position: relative;
 
-    margin-bottom: 0;
-    top: -14vh;
+    /* margin-top: -7rem; */
+    top: -7rem;
     height: 8em;
     width: 100vw;
 }
@@ -140,7 +140,7 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-size: .91em;
     font-weight: bold;
-    color: red;
+    color: black;
     /* transition: color 0.3s linear; */
 }
 #nav-links-container a:after {
@@ -157,7 +157,7 @@ main {
 }
 
 #nav-links-container a:visited {
-    color: red;
+    color: black;
 }
 
 
