@@ -58,13 +58,13 @@ main {
 
 #user-display button {
     /* margin-bottom: 3rem; */
-    font-size: .6rem;
-    height: 3rem;
+    font-size: 2rem;
+    /* height: 3rem; */
     width: 6rem;
     border-radius: 6px;
     transition: background .3s, color 0.6s linear;
     letter-spacing: .09em;
-    /* -webkit-appearance: none; */
+    -webkit-appearance: none;
 }
 /* #user-display button:hover {
     height: 3rem;
@@ -141,12 +141,12 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-size: .91em;
     font-weight: bold;
-    color: black;
+    color: red;
     /* transition: color 0.3s linear; */
 }
 
 #nav-links-container a:visited {
-    color: black;
+    color: red;
 }
 
 
