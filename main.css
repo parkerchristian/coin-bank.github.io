@@ -59,7 +59,7 @@ main {
 #user-display button {
     margin-bottom: 0;
     font-size: .6rem;
-    height: 3rem;
+    height: 5vh;
     width: 6rem;
     border-radius: 6px;
     transition: background .3s, color 0.6s linear;
@@ -102,7 +102,7 @@ main {
     position: relative;
 
     margin-bottom: 0;
-    margin-top: -7em;
+    top: -14vh;
     height: 8em;
     width: 100vw;
 }
@@ -140,7 +140,7 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-size: .91em;
     font-weight: bold;
-    color: black;
+    color: red;
     /* transition: color 0.3s linear; */
 }
 #nav-links-container a:after {
@@ -155,16 +155,11 @@ main {
     /* transform:scale3d(0,1,1);
     transition:transform .3s; */
 }
-#nav-links-container a:hover:after {
-    /* transform:scale3d(1,1,1); */
-    color: rgb(255, 218, 6);
-}
+
 #nav-links-container a:visited {
-    color: black;
+    color: red;
 }
-#nav-links-container a:visited:hover {
-    color:rgb(255, 218, 6);
-}
+
 
 #flex-inst {
     display: flex;
